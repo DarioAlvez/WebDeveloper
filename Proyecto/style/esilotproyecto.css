@@ -23,3 +23,13 @@
   font-stretch: calc(1,2);
 
 }
+
+.carga-pedidos
+{
+    position: absolute; 
+    top: 50%; 
+    left: 15%; 
+    transform: translate(-49%, -49%);
+
+
+}
