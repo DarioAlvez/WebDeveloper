@@ -1,0 +1,23 @@
+.descripcion-prod
+{
+    text-align: left;
+    font-style: italic;
+    font-size: medium;
+    font-weight: bold;
+
+}
+
+.boton-carga
+{
+    
+  border:double;
+  color: rgb(44, 0, 110);
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration:solid;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
