@@ -9,14 +9,8 @@
 
 .boton-carga
 {
-  position:absolute;
-  
-  border:double;
-  background-color: rgb(164, 219, 241);
-  padding: 8px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  font-stretch: calc(1,2);
+ 
+   position: absolute;
 
 }
 
@@ -38,5 +32,9 @@
 .productos-psag-right
 { 
   
+  float: right;
 
 }
+
+
+
