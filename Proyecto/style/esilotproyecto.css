@@ -9,17 +9,13 @@
 
 .boton-carga
 {
-    
+  position:absolute;
+  
   border:double;
-  color: rgb(44, 0, 110);
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration:solid;
-  display: inline-block;
+  background-color: rgb(164, 219, 241);
+  padding: 8px 16px;
   font-size: 16px;
-  margin: 4px 2px;
   cursor: pointer;
-  background-color: #008CBA;
   font-stretch: calc(1,2);
 
 }
@@ -34,6 +30,13 @@
 
 }
 
-.multilinea-obs{ 
+.multilinea-obs
+{ 
   width: 100%;
+}
+
+.productos-psag-right
+{ 
+  
+
 }
