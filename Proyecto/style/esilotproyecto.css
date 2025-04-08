@@ -32,17 +32,12 @@
   width: 100%;
 }
 
-.productos-psag-right
-{ 
-  
-  float: right;
-  padding: 80px 80px;
 
-}
 .productos-psag
 {
-  position:initial;
-  padding: 80px 80px;
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  gap: 1.5rem;
 
 }
 
