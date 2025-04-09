@@ -7,9 +7,17 @@
 
 }
 
+.top-intro
+{
+  padding: 50px;
+  border-radius: 10;
+  background-color: cornflowerblue;
+  text-align: center;
+}
+
 .boton-carga
 {
-  background-color: skyblue;
+  background-color: cornflowerblue;
   border: double;
   padding: 15px 30px;
   text-align: center;
@@ -32,13 +40,59 @@
   width: 100%;
 }
 
-
-.img-prod
+.prod-container
 {
-  display: grid;
-  grid-template-columns: 1fr, 1fr;
-  gap: 1.5rem;
+  display: flex;
+  align-content:space-around;
+  height: 50%;
+  flex-wrap: wrap; /* setea el orden para visualizar*/
+  
+}
+ 
+  .menu-foot
+  {
+    text-decoration: none;
+    font-size: larger;
+    position:relative;
+    ul
+    {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    }
+    li{display: inline;}
+    
+  
+    
+  }
+  
 
+.img-ph
+{
+  width:300px;
+  height:300px;
+  
 }
 
+.descrip-prod-ph
+{
+  text-align: center;
+}
 
+footer{ position: center;}
+
+aside {
+
+  padding-left: 10px;
+  margin-left: 0px;
+  float: left;
+  
+  background-color: cornflowerblue;
+   
+  
+}
+.familia-productos
+{
+    text-align: center;
+
+}
