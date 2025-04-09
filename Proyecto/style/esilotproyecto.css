@@ -11,13 +11,14 @@
 {
   padding: 50px;
   border-radius: 10;
-  background-color: cornflowerblue;
+  background-color: rgb(160, 187, 237);
   text-align: center;
+  border-radius: 10px;
 }
 
 .boton-carga
 {
-  background-color: cornflowerblue;
+  background-color: rgb(160, 187, 237);
   border: double;
   padding: 15px 30px;
   text-align: center;
@@ -49,8 +50,8 @@
   
 }
  
-  .menu-foot
-  {
+.menu-foot
+{
     text-decoration: none;
     font-size: larger;
     position:relative;
@@ -61,10 +62,12 @@
     justify-content:space-evenly;
     }
     li{display: inline;}
-    
-  
-    
-  }
+    a
+    { text-decoration: none;    
+      color: #000000;
+      
+    }
+}
   
 
 .img-ph
@@ -81,18 +84,30 @@
 
 footer{ position: center;}
 
-aside {
+aside 
+{
 
   padding-left: 10px;
   margin-left: 0px;
   float: left;
   
-  background-color: cornflowerblue;
+  background-color: rgb(160, 187, 237);
+  border-radius: 10px;
    
   
 }
-.familia-productos
-{
-    text-align: center;
 
+
+.chkbox-familia
+{
+  list-style-type: none
+
+}
+
+.logo-psag
+{ 
+  display: inline-block;
+  width:20%;
+  height:10%;
+  
 }
