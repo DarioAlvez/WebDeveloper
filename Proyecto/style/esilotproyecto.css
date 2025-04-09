@@ -11,7 +11,7 @@
 {
   padding: 50px;
   border-radius: 10;
-  background-color: rgb(160, 187, 237);
+  background-color: rgb(65, 132, 225);
   text-align: center;
   border-radius: 10px;
 }
@@ -110,4 +110,11 @@ aside
   width:20%;
   height:10%;
   
+}
+.imagenes-logo
+{
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+
 }
