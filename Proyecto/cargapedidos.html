@@ -9,17 +9,17 @@
 
     </head>
     <body>
-        <img style=" float:right;" src="./img/prods/felpitalogo.jpeg">
+        <!-- <img style=" float:right;" src="./img/prods/felpitalogo.jpeg">    imagen horrible-->
         <div>
             <form class="carga-pedidos" method="post" autocomplete="on">
                 <label>Numero de cliente: <input></label> <label>Direccion de entrega: <input maxlength="150"></label>
                 <br>
                 <br>
-                <label>Fecha de carga: <input readonly type="date"  ></label>
+                <label>Fecha de carga: <input id="date-fecha-carga" readonly type="date" value="" ></label>
                  <!--ver como mostrar la fecha de hoy sin poder modificar-->
                 <br>
                 <br>
-                <label>Fecha de entrega: <input type="date"></label>
+                <label>Fecha de entrega: <input id="date-fecha-entrega" type="date"></label>
                 <br>
                 <br>
                 <label>Codigo Producto: <input>         Cant: <input></label>

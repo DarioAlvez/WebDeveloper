@@ -1,0 +1,12 @@
+.carga-pedidos
+{   
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+
+
+}
+#date-fecha-carga
+{
+    
+}
