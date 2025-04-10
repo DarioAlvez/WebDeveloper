@@ -137,13 +137,6 @@ aside
   margin: 5px 0;
 }
 
-.link-menu
-{
-  font-style: italic;
-
-  color: #ffffff;
-
-}
 
 .li-menu
 {
@@ -152,4 +145,4 @@ aside
   background-color: #7499d1;
   padding: 5px;
   border-radius: 8px;
-}
+  }
