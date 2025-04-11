@@ -7,202 +7,203 @@
       <!--Llamada al file de css de proyect para todo el index importante agregar en el head y la ruta ./style/archivo css-->
     </head>
 
-    <div class="top-intro">
-      <div class="imagenes-logo">
-        <img class="logo-psag" src="./img/prods/logo 2017.jpg" alt="Imagen no disponible">
-        <div class="textos-header">
-          <h1 class="txt-head">Catálogo de Productos</h1>
-          <h4 class="txt-head">Proyecto de catálogo para presentar</h4>
-        </div>
-        <img class="logo-psag" src="./img/prods/felpitalogo.jpeg" alt="Imagen no disponible">
-      </div>
-        <nav class="menu-foot">
-          <ul>
-            <li class="li-menu">
-              <a  href="cargapedidos.html">Carga Avanzada de Pedidos</a> <!-- ver por que no puedo cambiar color de fuente desde Css y aca si con Style="Color:"-->
-            </li>
-            <li class="li-menu">
-             <a  href="verpedidos.html">Consulta Pedidos</a>
-            </li>
-            <li class="li-menu">
-              <a  href="nostros.html">Nosotros</a>
-            </li>
-            <li class="li-menu">
-              <a href="contacto.html">Contacto</a>
-            </li>
-            <li class="li-menu">
-              <a href="nuevoproductos.html">Nuevos Productos</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="separador-header"></div>
-      
-      <main>
-        <br>
-        <aside style="position: left;">
-          <label>Buscar:</label>
-          <br>
-          <input type="search";>
-          
-          <div>
-            <br>
-            <label style="margin-top: 4%;";>Familia de Productos:</label>
-            <ul class="chkbox-familia">
-              <li> <input type="checkbox"> <label>Papel Higienico</label> </li>
-              <li> <input type="checkbox"> <label>Rollo de Cocina</label> </li>
-              <li> <input type="checkbox"> <label>Servilletas</label> </li>
-              <li> <input type="checkbox"> <label>Institucionales</label> </li>
-            </ul>
+    <body>
+        <div class="top-intro">
+        <div class="imagenes-logo">
+          <img class="logo-psag" src="./img/prods/logo 2017.jpg" alt="Imagen no disponible">
+          <div class="textos-header">
+            <h1 class="txt-head">Catálogo de Productos</h1>
+            <h4 class="txt-head">Proyecto de catálogo para presentar</h4>
           </div>
-
-
-        </aside>
-           <!-- agrega prod con descripcion e imagenes Usar GRID o Flex -->
-           <!--ver grid template column= 1fr 1fr (dos columnas)-->
-          
-        <!--<div>
-          
-          <article class= "productos-psag">
-            <p class= "descripcion-prod">Rollo Felpita x 6 Extra suave</p>          
-            <img class="img-prod" src="img/prods/1.jpeg" alt="No se puede mostrar la imagen">
-          </article>
-
-          <article class = "productos-psag">
-            <p class= "descripcion-prod">Rollo Felpita 50 metros</p>          
-            <img class="img-prod" src="img/prods/2.jpeg" alt="No se puede mostrar la imagen">
-          </article>
-
-          <article class= "productos-psag">
-            <p class= "descripcion-prod">Rollo Felpita Suavidad x 4</p>
-            <img class="img-prod" src="img/prods/5.jpeg" alt="No se puede mostrar la imagen">
-          </article>
-          
-          <article class = "productos-psag">
-            <p class= "descripcion-prod">Rollo Felpita Profesional</p>          
-            <img class="img-prod" src="img/prods/2.jpeg" alt="No se puede mostrar la imagen">
-          </article>
-
-          <article class= "productos-psag">
-            <p class= "descripcion-prod">Rollo Felpita infinity</p>          
-            <img class="img-prod" src="img/prods/3.jpeg" alt="No se puede mostrar la imagen">
-          </article>
-
-          <article class = "productos-psag">
-            <p class= "descripcion-prod">Rollo Felpita x 6, 80 metros </p>          
-            <img class="img-prod" src="img/prods/6.jpeg" alt="No se puede mostrar la imagen">
-          </article>
-
-          <article class= "productos-psag">
-            <p class= "descripcion-prod">Rollo Felpita infinity 30 metros</p>          
-            <img class="img-prod" src="img/prods/7.jpeg" alt="No se puede mostrar la imagen">
-          </article>
-
-          <article class = "productos-psag">
-            <p class= "descripcion-prod">Rollo Felpita algodon</p>
-            <img class="img-prod" src="img/prods/8.jpeg" alt="No se puede mostrar la imagen">
-          </article>
-
-        </div>-->
-        <div class="prod-container">
-          <article class= "productos-psagph">
-            <img class="img-ph" src="img/prods/PH/cartabelladaily.png" alt="No se pudo mostrar la imagen">
-            <p class="descrip-prod-ph">Cartabella Daily</p>
-          </article>
-          
-          <article class= "productos-psagph">
-            <img class="img-ph" src="img/prods/PH/felpita50mts.png" alt="No se pudo mostrar la imagen">
-            <p class="descrip-prod-ph">Felpita 50 metros</p>
-          </article>
-          
-          <article class= "productos-psagph">
-            <img class="img-ph" src="img/prods/PH/felpita80mtsblanquisimo.png" alt="No se pudo mostrar la imagen">
-            <p class="descrip-prod-ph">Felpita Blanquisimo 80 metros</p>
-          </article>
-          
-          <article class= "productos-psagph">
-            <img class="img-ph" src="img/prods/PH/felpitablanquisimo.png" alt="No se pudo mostrar la imagen">
-            <p class="descrip-prod-ph">Felpita Blanquisimo</p>
-          </article>
-
-          <article class= "productos-psagph">
-            <img class="img-ph" src="img/prods/PH/felpitadoblehoja30mts.png" alt="No se pudo mostrar la imagen">
-            <p class="descrip-prod-ph">Felpita Doble Hoja 30 metros</p>
-          </article>
-
-          <article class= "productos-psagph">
-            <img class="img-ph" src="img/prods/PH/felpitadoblehoja30mtsx6.png" alt="No se pudo mostrar la imagen">
-            <p class="descrip-prod-ph">Felpita Doble Hoja 30 metros Pack 6 unidades</p>
-          </article>
-
-          <article class= "productos-psagph">
-            <img class="img-ph" src="img/prods/PH/felpitadobletextura.png" alt="No se pudo mostrar la imagen">
-            <p class="descrip-prod-ph">Felpita Doble Hoja con Soft textura</p>
-          </article>
-
-          <article class= "productos-psagph">
-            <img class="img-ph" src="img/prods/PH/felpitafamiliar.png" alt="No se pudo mostrar la imagen">
-            <p class="descrip-prod-ph">Felpita Pack Familiar</p>
-          </article>
-
-          <article class= "productos-psagph">
-            <img class="img-ph" src="img/prods/PH/felpitaindustrial8.png" alt="No se pudo mostrar la imagen">
-            <p class="descrip-prod-ph">Felpita Institucional 18 Grande</p>
-          </article>
-
-          <article class= "productos-psagph">
-            <img class="img-ph" src="img/prods/PH/felpitainfinity.png" alt="No se pudo mostrar la imagen">
-            <p class="descrip-prod-ph">Felpita Infinity</p>
-          </article>
-
-          <article class= "productos-psagph">
-            <img class="img-ph" src="img/prods/PH/felpitakids.png" alt="No se pudo mostrar la imagen">
-            <p class="descrip-prod-ph">Felpita Kids Decorado</p>
-          </article>
-
-          <article class= "productos-psagph">
-            <img class="img-ph" src="img/prods/PH/felpitasuperpack24.png" alt="No se pudo mostrar la imagen">
-            <p class="descrip-prod-ph">Felpita Super Pack 24 unidades Familiar </p>
-          </article>
-
-          <article class= "productos-psagph">
-            <img class="img-ph" src="img/prods/PH/felpitax12 familiar.png" alt="No se pudo mostrar la imagen">
-            <p class="descrip-prod-ph">Felpita Pack 12 unidades Familiar</p>
-          </article>
-
-          <article class= "productos-psagph">
-            <img class="img-ph" src="img/prods/PH/felpitax6familiar.png" alt="No se pudo mostrar la imagen">
-            <p class="descrip-prod-ph">Felpita Pack 6 unidades Familiar</p>
-          </article>
-
-          <article class= "productos-psagph">
-            <img class="img-ph" src="img/prods/PH/floripel.png" alt="No se pudo mostrar la imagen">
-            <p class="descrip-prod-ph">Floripel 4 unidades</p>
-          </article>
-
-          <article class= "productos-psagph">
-            <img class="img-ph" src="img/prods/PH/softpaper.png" alt="No se pudo mostrar la imagen">
-            <p class="descrip-prod-ph">Softpaper 4 unidades</p>
-          </article>
+          <img class="logo-psag" src="./img/prods/felpitalogo.jpeg" alt="Imagen no disponible">
         </div>
+          <nav class="menu-foot">
+            <ul>
+              <li class="li-menu">
+                <a  href="cargapedidos.html">Carga Avanzada de Pedidos</a> <!-- ver por que no puedo cambiar color de fuente desde Css y aca si con Style="Color:"-->
+              </li>
+              <li class="li-menu">
+              <a  href="verpedidos.html">Consulta Pedidos</a>
+              </li>
+              <li class="li-menu">
+                <a  href="nostros.html">Nosotros</a>
+              </li>
+              <li class="li-menu">
+                <a href="contacto.html">Contacto</a>
+              </li>
+              <li class="li-menu">
+                <a href="nuevoproductos.html">Nuevos Productos</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="separador-header"></div>
+        
+        <main>
+          <br>
+          <aside style="position: left;">
+            <label>Buscar:</label>
+            <br>
+            <input type="search";>
+            
+            <div>
+              <br>
+              <label style="margin-top: 4%;";>Familia de Productos:</label>
+              <ul class="chkbox-familia">
+                <li> <input type="checkbox"> <label>Papel Higienico</label> </li>
+                <li> <input type="checkbox"> <label>Rollo de Cocina</label> </li>
+                <li> <input type="checkbox"> <label>Servilletas</label> </li>
+                <li> <input type="checkbox"> <label>Institucionales</label> </li>
+              </ul>
+            </div>
+
+
+          </aside>
+            <!-- agrega prod con descripcion e imagenes Usar GRID o Flex -->
+            <!--ver grid template column= 1fr 1fr (dos columnas)-->
+            
+          <!--<div>
+            
+            <article class= "productos-psag">
+              <p class= "descripcion-prod">Rollo Felpita x 6 Extra suave</p>          
+              <img class="img-prod" src="img/prods/1.jpeg" alt="No se puede mostrar la imagen">
+            </article>
+
+            <article class = "productos-psag">
+              <p class= "descripcion-prod">Rollo Felpita 50 metros</p>          
+              <img class="img-prod" src="img/prods/2.jpeg" alt="No se puede mostrar la imagen">
+            </article>
+
+            <article class= "productos-psag">
+              <p class= "descripcion-prod">Rollo Felpita Suavidad x 4</p>
+              <img class="img-prod" src="img/prods/5.jpeg" alt="No se puede mostrar la imagen">
+            </article>
+            
+            <article class = "productos-psag">
+              <p class= "descripcion-prod">Rollo Felpita Profesional</p>          
+              <img class="img-prod" src="img/prods/2.jpeg" alt="No se puede mostrar la imagen">
+            </article>
+
+            <article class= "productos-psag">
+              <p class= "descripcion-prod">Rollo Felpita infinity</p>          
+              <img class="img-prod" src="img/prods/3.jpeg" alt="No se puede mostrar la imagen">
+            </article>
+
+            <article class = "productos-psag">
+              <p class= "descripcion-prod">Rollo Felpita x 6, 80 metros </p>          
+              <img class="img-prod" src="img/prods/6.jpeg" alt="No se puede mostrar la imagen">
+            </article>
+
+            <article class= "productos-psag">
+              <p class= "descripcion-prod">Rollo Felpita infinity 30 metros</p>          
+              <img class="img-prod" src="img/prods/7.jpeg" alt="No se puede mostrar la imagen">
+            </article>
+
+            <article class = "productos-psag">
+              <p class= "descripcion-prod">Rollo Felpita algodon</p>
+              <img class="img-prod" src="img/prods/8.jpeg" alt="No se puede mostrar la imagen">
+            </article>
+
+          </div>-->
+          <div class="prod-container">
+            <article class= "productos-psagph">
+              <img class="img-ph" src="img/prods/PH/cartabelladaily.png" alt="No se pudo mostrar la imagen">
+              <p class="descrip-prod-ph">Cartabella Daily</p>
+            </article>
+            
+            <article class= "productos-psagph">
+              <img class="img-ph" src="img/prods/PH/felpita50mts.png" alt="No se pudo mostrar la imagen">
+              <p class="descrip-prod-ph">Felpita 50 metros</p>
+            </article>
+            
+            <article class= "productos-psagph">
+              <img class="img-ph" src="img/prods/PH/felpita80mtsblanquisimo.png" alt="No se pudo mostrar la imagen">
+              <p class="descrip-prod-ph">Felpita Blanquisimo 80 metros</p>
+            </article>
+            
+            <article class= "productos-psagph">
+              <img class="img-ph" src="img/prods/PH/felpitablanquisimo.png" alt="No se pudo mostrar la imagen">
+              <p class="descrip-prod-ph">Felpita Blanquisimo</p>
+            </article>
+
+            <article class= "productos-psagph">
+              <img class="img-ph" src="img/prods/PH/felpitadoblehoja30mts.png" alt="No se pudo mostrar la imagen">
+              <p class="descrip-prod-ph">Felpita Doble Hoja 30 metros</p>
+            </article>
+
+            <article class= "productos-psagph">
+              <img class="img-ph" src="img/prods/PH/felpitadoblehoja30mtsx6.png" alt="No se pudo mostrar la imagen">
+              <p class="descrip-prod-ph">Felpita Doble Hoja 30 metros Pack 6 unidades</p>
+            </article>
+
+            <article class= "productos-psagph">
+              <img class="img-ph" src="img/prods/PH/felpitadobletextura.png" alt="No se pudo mostrar la imagen">
+              <p class="descrip-prod-ph">Felpita Doble Hoja con Soft textura</p>
+            </article>
+
+            <article class= "productos-psagph">
+              <img class="img-ph" src="img/prods/PH/felpitafamiliar.png" alt="No se pudo mostrar la imagen">
+              <p class="descrip-prod-ph">Felpita Pack Familiar</p>
+            </article>
+
+            <article class= "productos-psagph">
+              <img class="img-ph" src="img/prods/PH/felpitaindustrial8.png" alt="No se pudo mostrar la imagen">
+              <p class="descrip-prod-ph">Felpita Institucional 18 Grande</p>
+            </article>
+
+            <article class= "productos-psagph">
+              <img class="img-ph" src="img/prods/PH/felpitainfinity.png" alt="No se pudo mostrar la imagen">
+              <p class="descrip-prod-ph">Felpita Infinity</p>
+            </article>
+
+            <article class= "productos-psagph">
+              <img class="img-ph" src="img/prods/PH/felpitakids.png" alt="No se pudo mostrar la imagen">
+              <p class="descrip-prod-ph">Felpita Kids Decorado</p>
+            </article>
+
+            <article class= "productos-psagph">
+              <img class="img-ph" src="img/prods/PH/felpitasuperpack24.png" alt="No se pudo mostrar la imagen">
+              <p class="descrip-prod-ph">Felpita Super Pack 24 unidades Familiar </p>
+            </article>
+
+            <article class= "productos-psagph">
+              <img class="img-ph" src="img/prods/PH/felpitax12 familiar.png" alt="No se pudo mostrar la imagen">
+              <p class="descrip-prod-ph">Felpita Pack 12 unidades Familiar</p>
+            </article>
+
+            <article class= "productos-psagph">
+              <img class="img-ph" src="img/prods/PH/felpitax6familiar.png" alt="No se pudo mostrar la imagen">
+              <p class="descrip-prod-ph">Felpita Pack 6 unidades Familiar</p>
+            </article>
+
+            <article class= "productos-psagph">
+              <img class="img-ph" src="img/prods/PH/floripel.png" alt="No se pudo mostrar la imagen">
+              <p class="descrip-prod-ph">Floripel 4 unidades</p>
+            </article>
+
+            <article class= "productos-psagph">
+              <img class="img-ph" src="img/prods/PH/softpaper.png" alt="No se pudo mostrar la imagen">
+              <p class="descrip-prod-ph">Softpaper 4 unidades</p>
+            </article>
+          </div>
+          <br>
+          <br>
+          
+          
+        <!--<div style="text-align: center";>
+            <p style="font-size: x-large;"> Acceso al formulario de carga de pedidos</p><a href="cargapedidos.html">
+            <button class= "boton-carga" type="button">Ir</button></a>
+          </div>  -->
+        </main>
+    
+
         <br>
         <br>
-        
-        
-       <!--<div style="text-align: center";>
-          <p style="font-size: x-large;"> Acceso al formulario de carga de pedidos</p><a href="cargapedidos.html">
-          <button class= "boton-carga" type="button">Ir</button></a>
-        </div>  -->
-      </main>
-   
+        <footer>
+        <p class="derechosreservados" style="text-align: center;">Todos los derechos reservados por 
+          <a href="https://www.psag.com.ar">Papelera San Andrés de Giles</a> ©.</p>
 
-      <br>
-      <br>
-      <footer>
-      <p class="derechosreservados" style="text-align: center;">Todos los derechos reservados por </style>
-        <a href="https://www.psag.com.ar">Papelera San Andrés de Giles</a> ©.</p>
-
-      </footer>
+        </footer>
 
     </body>
 

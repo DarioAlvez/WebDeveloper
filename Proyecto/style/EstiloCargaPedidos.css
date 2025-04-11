@@ -1,7 +1,13 @@
 .container-carga-pedidos
-{
+{   
     display: flex;
-    flex-direction: column;
+    align-content:space-around;
+    height: 50%;
+    flex-wrap: wrap;
+}
+.multilinea-obs
+{ 
+  width: 100%;
 }
 
 .clases-datos {
