@@ -1,9 +1,57 @@
+.top-introPedidos
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(160, 187, 237); 
+    z-index: 1000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;  
+
+}
+
+.menu-foot-pedidos
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(160, 187, 237); 
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    text-decoration: none;
+    font-size: larger;
+    position:relative;
+    ul
+    {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    }
+    li{display: inline;}
+    a
+    { text-decoration: none;    
+      color: #000000;
+      
+    }
+}
+
+
+
+
+
+
 .container-carga-pedidos
 {   
     display: flex;
     align-content:space-around;
     height: 50%;
     flex-wrap: wrap;
+    position: 
+  
 }
 .multilinea-obs
 { 
