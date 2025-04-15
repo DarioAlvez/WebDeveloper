@@ -25,12 +25,6 @@
     border: 1px solid #ccc;
     }
 
-.label-datos
-{
-    
-    display: block;
-    align-items: center;
-}
 
 .formulario-pedidos 
 {
@@ -47,7 +41,7 @@
     padding: 8px;
     font-size: 10px;
     border-radius: 8px;
-    font-size:small;
+    font-size:medium;
 }
 
 .carga-pedidos-data {
@@ -69,6 +63,33 @@
     width: 100px; 
     padding: 5px;
 }
+.label-datos
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-top: 50px;
+    max-width: 300px; 
+
+}
+.label-datos label
+{
+    display: flex; 
+    /*justify-content: flex-start;*/
+    align-items: left;
+    gap: 10px; 
+    display: inline-block;
+    width: auto;
+    font-weight: bold;
+}
+.label-datos input
+{
+    height: 20px;
+    flex: 0 0 100px;
+    margin-left: auto;
+    margin-top: 3%;
+}
+
 
 
 
