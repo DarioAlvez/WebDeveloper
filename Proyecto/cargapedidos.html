@@ -3,43 +3,66 @@
 <HTML lang="es"> <!-- Al setearlo el navegador me sugiere traduccion al español, como el S.O nativo-->
   
     <head>      
-      <link  rel="stylesheet" href="./style/EstiloCargaPedidos.css"> 
-      <link rel="stylesheet" href="./style/esilotproyecto.css">
+      <link rel="stylesheet" href="./style/EstiloCargaPedidos.css"> <link rel="stylesheet" href="./style/esilotproyecto.css">
+      
      
     </head>
     <body>
       
-      <div class="top-introPedidos">
+      <div class="top-intro">
         <div class="imagenes-logo">
           <img class="logo-psag" src="./img/logo_2017.png" alt="Imagen no disponible">
           <div class="textos-header">
-            <h1 class="txt-head">Catálogo de Productos</h1>
+            <h1 class="txt-head">Carga Avanzada de Pedidos</h1>
             <h4 class="txt-head">Proyecto de catálogo para presentar</h4>
           </div>
           <img class="logo-psag" src="./img/logo_felpita.png" alt="Imagen no disponible">
         </div>
+          <nav class="menu-foot">
+            <ul>
+              <li class="li-menu">
+                <a  href="index.html">Catalogo</a> <!-- ver por que no puedo cambiar color de fuente desde Css y aca si con Style="Color:"-->
+              </li>
+              <li class="li-menu">
+              <a  href="verpedidos.html">Consulta Pedidos</a>
+              </li>
+              <li class="li-menu">
+                <a  href="nostros.html">Nosotros</a>
+              </li>
+              <li class="li-menu">
+                <a href="contacto.html">Contacto</a>
+              </li>
+              <li class="li-menu">
+                <a href="nuevoproductos.html">Nuevos Productos</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <div class="separador-header"></div>
-      </div>
-        <div class="separador-header"></div>
+        
             
-        <main>
-            <!-- <img style=" float:right;" src="./img/prods/felpitalogo.jpeg">    imagen horrible-->
-            <div class="Container-carga-pedidos">
-                <form  method="post" autocomplete="on">
+      <main>
+            
+            <div class="container-carga-pedidos">
+                <form class="formulario-pedidos" method="post" autocomplete="on">
+                    <br>
                     <br>
                     <div class="label-datos">
                         <label>Numero de cliente: <input></label>
                     </div>
                     <br>
+                    <br>
                     <div class="label-datos">
                         <label>Direccion de entrega: <input maxlength="100"></label>
                     </div>
+                    <br>
                     <br>
                     <div class="label-datos">
                         <label>Numero de pedido: <input></label>
                     </div>
                     <br>
-                    <div id="fecha-carga">
+                    <br>
+                    <div class="fecha-carga">
                     <label>Fecha de carga: <input id="date-fecha-carga" readonly type="date"></label>
                     <!--ver como mostrar la fecha de hoy sin poder modificar-->
                     </div>
@@ -49,25 +72,19 @@
                     </div>
                     <br>
                     <br>
-                    <div id="fecha-entrega"></div>
-                    <label>Fecha de entrega: <input id="date-fecha-entrega" type="date"></label>
-                    </div>
-                    <br>
-                    <br>
-                
                     <div class="carga-pedidos-data">
                         <label>Codigo Producto: <input>         Cant: <input></label>
-                        <br>
+                        
                         <label>Codigo Producto: <input>         Cant: <input></label>
-                        <br>
+                        
                         <label>Codigo Producto: <input>         Cant: <input></label>
-                        <br>
+                        
                         <label>Codigo Producto: <input>         Cant: <input></label>
-                        <br>
+                        
                         <label>Codigo Producto: <input>         Cant: <input></label>
-                        <br>
+                        
                         <label>Codigo Producto: <input>         Cant: <input></label>
-                        <br>
+                        
                         <label>Codigo Producto: <input>         Cant: <input></label>
                     </div>
                     <br>
@@ -76,13 +93,14 @@
                         <label>Observaciones:   
                         <br>
                         <!-- Multilinea para campo observaciones-->
-                        <textarea class="multilinea-obs" name="textarea" style="height: 100px; width: 40%;"></textarea>
+                        <textarea class="multilinea-obs" name="textarea" style="height: 100px; width: 600px;"></textarea>
                     </div>
                     <br>
                     <br>
-                    <button id="boton-carga" type="submit" style="width: 8%;">Cargar</button> <button id="boton-carga" type="reset" style="width: 8%;">Cancelar</button> 
-                    <br>
-                    <br>
+                    <div class="contenedor-botones">
+                      <button class="botones-pedidos" type="submit">Cargar</button>
+                      <button class="botones-pedidos" type="reset">Cancelar</button>
+                  </div>
                    
                     <!--<a id="boton-consultar" href="verpedidos.html" class="button-link">Consultar</a> -->
 
