@@ -34,17 +34,16 @@
 
 .formulario-pedidos 
 {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    gap: 20px; /* Espacio entre los botones */
-    margin-top: 20px;
+    flex-direction: column;
+    
+    max-width: 500px;
+    margin: 0 auto; 
+    padding: 5%;
 }
 
 .botones-pedidos {
-    width: 100px; /* o cualquier ancho deseado */
+    width: 100px; 
     padding: 8px;
     font-size: 10px;
     border-radius: 8px;
@@ -54,9 +53,9 @@
 .carga-pedidos-data {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Espacio vertical entre líneas */
+    gap: 10px; 
     margin-top: 20px;
-    max-width: 500px; /* Opcional, para limitar el ancho */
+    max-width: 500px; 
 }
 
 .carga-pedidos-data label {
@@ -67,7 +66,7 @@
 }
 
 .carga-pedidos-data input {
-    width: 100px; /* O el tamaño que prefieras */
+    width: 100px; 
     padding: 5px;
 }
 
