@@ -6,24 +6,6 @@
     font-weight: bold;
 
 }
-
-
-
-.boton-carga
-{
-  background-color: rgb(160, 187, 237);
-  border: none; 
-  border-radius: 8px;
-  padding: 15px 30px;
-  text-align: center;
-  font-size: large;
-
-}
-
-
-
-
-
 .prod-container
 {
   display: flex;
