@@ -57,16 +57,7 @@
     padding: 30px;
 }
 
-.carga-pedidos-data label {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 30px; 
-}
-.carga-pedidos-data input {
-    width: 100px; 
-    padding: 5px;
-}
+
 
 
 .contenedor-botones {
