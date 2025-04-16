@@ -5,10 +5,10 @@
     <head>      
       <link  rel="stylesheet" href="./style/EstiloCargaPedidos.css"> 
       <link rel="stylesheet" href="./style/esilotproyecto.css">
-     
     </head>
+
     <body>
-      
+        <!-- <img src="./img/prods/felpitalogo.jpeg">    imagen horrible-->      
       <div class="top-intro">
         <div class="imagenes-logo">
           <img class="logo-psag" src="./img/logo_2017.png" alt="Imagen no disponible">
@@ -21,92 +21,71 @@
           <nav class="menu-foot">
             <ul>
               <li class="li-menu">
-                <a  href="index.html">Catalogo</a> <!-- ver por que no puedo cambiar color de fuente desde Css y aca si con Style="Color:"-->
+                <a  href="cargapedidos.html">Carga Avanzada de Pedidos</a> <!-- ver por que no puedo cambiar color de fuente desde Css y aca si con Style="Color:"-->
               </li>
               <li class="li-menu">
               <a  href="verpedidos.html">Consulta Pedidos</a>
               </li>
               <li class="li-menu">
-                <a  href="nostros.html">Nosotros</a>
+                <a  href="nostros.html".html">Nosotros</a>
               </li>
               <li class="li-menu">
                 <a href="contacto.html">Contacto</a>
               </li>
               <li class="li-menu">
-                <a href="nuevoproductos.html">Nuevos Productos</a>
+                <a href="nuevosproductos.html">Nuevos Productos</a>
               </li>
             </ul>
           </nav>
         </div>
-        <div class="separador-header"></div>
         
-            
         <main>
             <!-- <img style=" float:right;" src="./img/prods/felpitalogo.jpeg">    imagen horrible-->
             <div class="Container-carga-pedidos">
-                <form  method="post" autocomplete="on">
+                <form class="formulario-pedidos" method="post" autocomplete="on">
                     <br>
-                    <div class="label-datos">
+                    <div class="carga-pedidos-data">
                         <label>Numero de cliente: <input></label>
-                    </div>
-                    <br>
-                    <div class="label-datos">
                         <label>Direccion de entrega: <input maxlength="100"></label>
-                    </div>
-                    <br>
-                    <div class="label-datos">
                         <label>Numero de pedido: <input></label>
-                    </div>
-                    <br>
+                    
                     <div id="fecha-carga">
                     <label>Fecha de carga: <input id="date-fecha-carga" readonly type="date"></label>
-                    
                     <!--ver como mostrar la fecha de hoy sin poder modificar-->
                     </div>
-                    <br>
                     <div class="label-datos">
                     <label>Fecha de entrega: <input id="date-fecha-entrega" type="date"></label>
                     </div>
-                    
                     <div class="carga-pedidos-data">
                         <label>Codigo Producto: <input>         Cant: <input></label>
-                        <br>
+                        
                         <label>Codigo Producto: <input>         Cant: <input></label>
-                        <br>
+                        
                         <label>Codigo Producto: <input>         Cant: <input></label>
-                        <br>
+                        
                         <label>Codigo Producto: <input>         Cant: <input></label>
-                        <br>
+
                         <label>Codigo Producto: <input>         Cant: <input></label>
-                        <br>
+                        
                         <label>Codigo Producto: <input>         Cant: <input></label>
-                        <br>
+                        
                         <label>Codigo Producto: <input>         Cant: <input></label>
-                    </div>
-                    <br>
-                    <br>
+                    </div>                    
                     <div id="observaciones-multilinea"></div>
-                        <label>Observaciones:   
-                        <br>
+                        <label>Observaciones:
                         <!-- Multilinea para campo observaciones-->
                         <textarea class="multilinea-obs" name="textarea" style="height: 100px; width: 40%;"></textarea>
                     </div>
-                    <br>
-                    <br>
-                    <button id="boton-carga" type="submit" style="width: 8%;">Cargar</button> <button id="boton-carga" type="reset" style="width: 8%;">Cancelar</button> 
-                    <br>
-                    <br>
+                    
+                    <button class="botones-pedidos" type="submit" style="width: 8%;">Cargar</button> <button class="botones-pedidos" type="reset" style="width: 8%;">Cancelar</button> 
+                    
                    
                     <!--<a id="boton-consultar" href="verpedidos.html" class="button-link">Consultar</a> -->
 
 
                 </form>
-            </div>
-           
+            </div>           
         </main>
-        <br>
-        <br>
-        
         <footer>
             <p class="derechosreservados" style="text-align: center;">Todos los derechos reservados por 
               <a href="https://www.psag.com.ar">Papelera San Andrés de Giles</a> ©.</p>

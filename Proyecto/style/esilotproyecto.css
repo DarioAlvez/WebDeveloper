@@ -19,15 +19,7 @@
 
 }
 
-.carga-pedidos
-{
-    position: absolute; 
-    top: 50%; 
-    left: 25%; 
-    transform: translate(-49%, -49%);
 
-
-}
 
 
 
@@ -36,7 +28,7 @@
   display: flex;
   align-content:space-around;
   height: 50%;
-  flex-wrap: wrap; /* setea el orden para visualizar*/
+  flex-wrap: wrap; 
   
 }
  
