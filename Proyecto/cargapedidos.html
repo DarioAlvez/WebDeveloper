@@ -3,8 +3,8 @@
 <HTML lang="es"> <!-- Al setearlo el navegador me sugiere traduccion al español, como el S.O nativo-->
   
     <head>      
-      <link rel="stylesheet" href="./style/EstiloCargaPedidos.css"> <link rel="stylesheet" href="./style/esilotproyecto.css">
-      
+      <link  rel="stylesheet" href="./style/EstiloCargaPedidos.css"> 
+      <link rel="stylesheet" href="./style/esilotproyecto.css">
      
     </head>
     <body>
@@ -13,7 +13,7 @@
         <div class="imagenes-logo">
           <img class="logo-psag" src="./img/logo_2017.png" alt="Imagen no disponible">
           <div class="textos-header">
-            <h1 class="txt-head">Carga Avanzada de Pedidos</h1>
+            <h1 class="txt-head">Catálogo de Productos</h1>
             <h4 class="txt-head">Proyecto de catálogo para presentar</h4>
           </div>
           <img class="logo-psag" src="./img/logo_felpita.png" alt="Imagen no disponible">
@@ -33,7 +33,7 @@
                 <a href="contacto.html">Contacto</a>
               </li>
               <li class="li-menu">
-                <a href="nuevosproductos.html">Nuevos Productos</a>
+                <a href="nuevoproductos.html">Nuevos Productos</a>
               </li>
             </ul>
           </nav>
@@ -41,45 +41,67 @@
         <div class="separador-header"></div>
         
             
-      <main>
-        <div class="container-carga-pedidos">
-        <form class="formulario-pedidos" method="post" autocomplete="on">
-          <div class="label-datos">
-            <label>Numero de cliente:    <input></label>
-            <label>Direccion de entrega: <input maxlength="100"></label>
-            <label>Numero de pedido:     <input></label>
-            <label>Fecha de carga:       <input id="date-fecha-carga" readonly type="date"></label>
-            <label>Fecha de entrega:     <input id="date-fecha-entrega" type="date"></label>
-          </div>
-          <br>
-          <div class="carga-pedidos-data">
-            <label>Codigo Producto: <input>         Cant: <input></label>
-            <label>Codigo Producto: <input>         Cant: <input></label>
-            <label>Codigo Producto: <input>         Cant: <input></label>
-            <label>Codigo Producto: <input>         Cant: <input></label>
-            <label>Codigo Producto: <input>         Cant: <input></label>
-            <label>Codigo Producto: <input>         Cant: <input></label>
-            <label>Codigo Producto: <input>         Cant: <input></label>
-            <label>Codigo Producto: <input>         Cant: <input></label>
-            <label>Codigo Producto: <input>         Cant: <input></label>
-          </div>
-          <br>
-          <br>
-          <div id="observaciones-multilinea"></div>
-            <label style="font-weight: bold;">Observaciones:   
-            <br>
-            <!-- Multilinea para campo observaciones-->
-            <textarea class="multilinea-obs" name="textarea" style="height: 100px; width: 600px; margin-top: 10px;"></textarea>
-          </label>
-          <br>
-          <br>
-          <div class="contenedor-botones">
-            <button class="botones-pedidos" type="submit">Cargar</button>
-            <button class="botones-pedidos" type="reset">Cancelar</button>
-          </div>
+        <main>
+            <!-- <img style=" float:right;" src="./img/prods/felpitalogo.jpeg">    imagen horrible-->
+            <div class="Container-carga-pedidos">
+                <form  method="post" autocomplete="on">
+                    <br>
+                    <div class="label-datos">
+                        <label>Numero de cliente: <input></label>
+                    </div>
+                    <br>
+                    <div class="label-datos">
+                        <label>Direccion de entrega: <input maxlength="100"></label>
+                    </div>
+                    <br>
+                    <div class="label-datos">
+                        <label>Numero de pedido: <input></label>
+                    </div>
+                    <br>
+                    <div id="fecha-carga">
+                    <label>Fecha de carga: <input id="date-fecha-carga" readonly type="date"></label>
+                    
+                    <!--ver como mostrar la fecha de hoy sin poder modificar-->
+                    </div>
+                    <br>
+                    <div class="label-datos">
+                    <label>Fecha de entrega: <input id="date-fecha-entrega" type="date"></label>
+                    </div>
+                    
+                    <div class="carga-pedidos-data">
+                        <label>Codigo Producto: <input>         Cant: <input></label>
+                        <br>
+                        <label>Codigo Producto: <input>         Cant: <input></label>
+                        <br>
+                        <label>Codigo Producto: <input>         Cant: <input></label>
+                        <br>
+                        <label>Codigo Producto: <input>         Cant: <input></label>
+                        <br>
+                        <label>Codigo Producto: <input>         Cant: <input></label>
+                        <br>
+                        <label>Codigo Producto: <input>         Cant: <input></label>
+                        <br>
+                        <label>Codigo Producto: <input>         Cant: <input></label>
+                    </div>
+                    <br>
+                    <br>
+                    <div id="observaciones-multilinea"></div>
+                        <label>Observaciones:   
+                        <br>
+                        <!-- Multilinea para campo observaciones-->
+                        <textarea class="multilinea-obs" name="textarea" style="height: 100px; width: 40%;"></textarea>
+                    </div>
+                    <br>
+                    <br>
+                    <button id="boton-carga" type="submit" style="width: 8%;">Cargar</button> <button id="boton-carga" type="reset" style="width: 8%;">Cancelar</button> 
+                    <br>
+                    <br>
                    
-        </form>
-          </div>
+                    <!--<a id="boton-consultar" href="verpedidos.html" class="button-link">Consultar</a> -->
+
+
+                </form>
+            </div>
            
         </main>
         <br>
@@ -92,5 +114,6 @@
         </footer>
 
     </body>
+    <script src="./Scripts/scripts.js"></script> <!--activar js-->
 
 </html>
