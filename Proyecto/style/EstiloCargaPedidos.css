@@ -11,12 +11,7 @@
   
  
 }
-@media (max-width: 768px) {
-    .top-intro-pedidos {
-      position: static;
-      height: auto;
-    }
-}    
+ 
 .container-carga-pedidos
 {
     position: static;
@@ -55,6 +50,14 @@
     gap: 20px;
     width: 500px;
     padding: 30px;
+}
+
+.Lbl-form
+{
+
+    padding-right: 15px;
+   
+
 }
 
 
