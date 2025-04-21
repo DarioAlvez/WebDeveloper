@@ -1,23 +1,15 @@
 .top-intro-pedidos
 {
-    display: flex;
-    position: fixed;
-    top: 0;
+    background-color: rgb(160, 187, 237);
+    border-radius: 10px;
     width: 100%;
-    background-color: rgb(160, 187, 237); 
-    height: 50%;
-    padding: 10px 20px;
-    justify-content: space-between;
-  
- 
+    height: 20%;
+    position:fixed;
+    top: 0; 
+    
 }
  
-.container-carga-pedidos
-{
-    position: static;
 
-
-}
 
 .multilinea-obs
 { 
@@ -42,16 +34,17 @@
     padding: 5px;
     border: 1px solid #ccc;
 }
-.formulario-pedidos 
+.container-carga-pedidos
 {
     display: flex;
     flex-direction: column;
     position: relative;
-    align-items: center;
+    /*align-items: center;
+    margin-top: 15%;
+    max-width: 80%;*/
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
     
-    max-width: 75%;
-    margin: 0 auto; 
-    padding: 5%;
+    
 }
 
 .carga-pedidos-data 
@@ -61,11 +54,11 @@
     margin-top: 15%;
     gap: 20px;
     width: 500px;
-    padding: 30px;
+    padding: 10px;
 }
 
 .contenedor-botones {
-    margin-top:5%;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -81,21 +74,28 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    gap: 30px; 
-    margin-top:10%;
+    gap: 20px;
+    margin-top: 20px;
     width: 500px;
+    padding: 10px;
 }
 .cod-prod-cant input {
     width: 100px; 
-    padding: 5px;
+    padding: 4px;
 }
 
 #datepicker-fechas-pedido
 {
-    display: inline-block;
+    
     position: inherit;
-    margin-right: 5%;    
-    gap: 30px;    
+    justify-content: left;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+    gap: 20px;
+    width: 500px;
+    padding: 10px;
+    
 }
 .date-fecha-carga
 {
@@ -106,7 +106,8 @@
 #observaciones-multilinea
 {
 
-    margin-top: 10%;
+    margin-top: 30px;
+    padding: 10px;
 
 }
 
