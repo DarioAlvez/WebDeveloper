@@ -4,26 +4,26 @@ document.querySelector('#date-fecha-carga').value = ahora;*/
 
 const products = [
     {
-        name: "Cartabella Dayli",
-        description: "------",
+        name: "Cartabella Daily",
+        description: "Cartabella Daily es un papel higiénico de 2 capas,\nsuave y resistente, ideal para el uso diario.",
         image: "img/prods/PH/cartabelladaily.png",
         price: 15
     },  
     {
         name: "Felpita 50 metros",
-        description: "-------",
+        description: "Felpita 50 metros, ideal para uso diario y de alta calidad.",
         image: "img/prods/PH/felpita50mts.png",
         price: 25
     },
     {
         name: "Felpita Blanquisimo 80 metros",
-        description: "------",
+        description: "Felpita Blanquisimo 80 metros,\npapel higiénico de alta calidad y suavidad.",
         image: "img/prods/PH/felpita80mtsblanquisimo.png",
         price: 50
     },
     {
         name: "Felpita Blanquisimo",
-        description: "---------",
+        description: "Felpita Blanquisimo!\nUn papel higiénico suave y resistente, ideal para el uso diario.",
         image: "img/prods/PH/felpitablanquisimo.png",
         price: 10
 
@@ -120,17 +120,20 @@ const products = [
 
 
 function createProductCard(product) {
-    const card = document.createElement('productos-psagph');
+    const card = document.createElement('article');
     card.classList.add('product-card');
+
 
     const img = document.createElement('img');
     img.src = product.image;
     img.alt = product.name;
 
-    const title = document.createElement('descrip-prod-ph');
+    const title = document.createElement('h3');
+    title.classList.add('nombre-prod');
     title.textContent = product.name;
 
-    const description = document.createElement('p');
+    const description = document.createElement('descripcion-prod');
+    description.classList.add('descripcion-prod');
     description.textContent = product.description;
 
     const price = document.createElement('p');
@@ -172,4 +175,4 @@ const grid = document.querySelector('.prod-container');
 
 const button = document.querySelector('#btn-add-products');
 
-button.addEventListener('click', addProduct);
+/*button.addEventListener('click', addProduct);*/

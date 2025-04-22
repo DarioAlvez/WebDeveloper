@@ -47,6 +47,7 @@
   margin-top: 10%;
   flex-wrap: wrap;
   margin-left: 15%;
+
   
 }
  
@@ -80,14 +81,27 @@
 
 .img-ph
 {
-  width:300px;
-  height:300px;
+  display: flex;
+
+  width: 300px;
+  height: 300px;
   
 }
 
-.descrip-prod-ph
+.nombre-prod
 {
-  text-align: center;
+  text-align:left;
+  font-weight: bold;
+ 
+}
+.descripcion-prod
+{
+  white-space: pre-wrap;
+  text-align: left;
+  font-style: italic;
+  font-size: medium;  
+  
+  line-height: 1.5;  
 }
 
 footer{ position: center;}
