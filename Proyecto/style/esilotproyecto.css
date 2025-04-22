@@ -31,14 +31,14 @@
 }
 
 
-.descripcion-prod
+/*.descripcion-prod
 {
     text-align: left;
     font-style: italic;
     font-size: medium;
     font-weight: bold;
 
-}
+}*/
 .prod-container
 {
   display: flex;
@@ -157,7 +157,7 @@ aside
   background-color: #7499d1;
   padding: 5px;
   border-radius: 8px;
-  }
+}
 
 
   

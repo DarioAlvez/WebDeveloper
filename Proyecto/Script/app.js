@@ -115,19 +115,19 @@ const products = [
     
 ];
 
-const flexProdContainer = document.querySelector('prod-container');
+// Removed duplicate declaration of flexProdContainer
 
-/*
+
 
 function createProductCard(product) {
     const card = document.createElement('article');
     card.classList.add('product-card');
 
-    const img = document.createElement('img');
+    const img = document.createElement('img-ph');
     img.src = product.image;
     img.alt = product.name;
 
-    const title = document.createElement('h3');
+    const title = document.createElement('name');
     title.textContent = product.name;
 
     const description = document.createElement('p');
@@ -157,17 +157,19 @@ function addProduct() {
     };
 
     const card = createProductCard(newProduct);
-    grid.appendChild(card);
+    flexProdContainer.appendChild(card);
 }
+
+const flexProdContainer = document.querySelector('.prod-container');
 
 products.forEach( product => 
     {
     const card = createProductCard(product);
-    grid.appendChild(card);
+    flexProdContainer.appendChild(card);
 });
 
 const grid = document.querySelector('.prod-container');
 
 const button = document.querySelector('#btn-add-products');
 
-button.addEventListener('click', addProduct);*/
+button.addEventListener('click', addProduct);
