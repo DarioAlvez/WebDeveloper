@@ -23,18 +23,15 @@
     padding: 5px;
     border: 1px solid #ccc;
 }
-.container-carga-pedidos
+.formulario-pedidos 
 {
     display: flex;
     flex-direction: column;
-    position: relative;
-    /*align-items: center;
-    margin-top: 15%;
-    max-width: 80%;*/
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    
-    
+    align-items: center;
+    margin-top: 25vh;
 }
+
+
 
 .carga-pedidos-data 
 {
@@ -46,7 +43,7 @@
 }
 
 .contenedor-botones {
-    margin-top: 30px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -62,15 +59,11 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    gap: 20px;
-    margin-top: 20px;
-    width: 500px;
+    row-gap: 20px;
     padding: 10px;
+    margin-top: 10px;
 }
-.cod-prod-cant input {
-    width: 100px; 
-    padding: 4px;
-}
+
 
 #datepicker-fechas-pedido
 {
@@ -79,8 +72,7 @@
     justify-content: left;
     display: flex;
     flex-direction: row;
-    margin-top: 1%;
-    gap: 20px;
+    column-gap: 40px;
     width: 500px;
     padding: 10px;
     
@@ -94,7 +86,7 @@
 #observaciones-multilinea
 {
 
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 10px;
 
 }
