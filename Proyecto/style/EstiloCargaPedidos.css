@@ -91,15 +91,10 @@
 
 }
 
+#fecha-actual
+{   
+    text-align: center;
+    border: 1px solid #090707;
 
 
-
-
-
-
-
-/*#date-fecha-carga
-{
-    hay que usar JS para setear el valor de la fecha actual
-
-}*/
+}

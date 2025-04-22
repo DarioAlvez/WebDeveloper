@@ -173,5 +173,14 @@ aside
   border-radius: 8px;
 }
 
+#btn-add-products
+{
+  background-color: #7499d1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
   

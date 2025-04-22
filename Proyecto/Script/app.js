@@ -1,6 +1,3 @@
-/*const ahora = Temporal.Now.plainDateISO().toString(); ||||| fecha actual||||
-document.querySelector('#date-fecha-carga').value = ahora;*/
-
 
 const products = [
     {
@@ -165,14 +162,15 @@ function addProduct() {
 
 const flexProdContainer = document.querySelector('.prod-container');
 
-products.forEach( product => 
-    {
+products.forEach( product => {
     const card = createProductCard(product);
     flexProdContainer.appendChild(card);
 });
 
 const grid = document.querySelector('.prod-container');
 
-const button = document.querySelector('#btn-add-products');
+// const button = document.querySelector('#btn-add-products');
+// button.addEventListener('click', addProduct);
 
-/*button.addEventListener('click', addProduct);*/
+
+
