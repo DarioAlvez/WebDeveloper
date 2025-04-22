@@ -13,8 +13,20 @@
 .menu-lateral
 {
   position: fixed;
-  top: 21%;
+  top: 20.5%;
   left: 0;
+  width: 200px;
+  height: 200px;
+  #lbl-buscar
+  {
+    position: relative;
+    top: 2px;
+  }
+  #busqueda-aside
+  {
+    position: relative;
+    top: 2px;
+  }
   
 }
 
@@ -85,11 +97,9 @@ aside
 
   padding-left: 10px;
   margin-left: 0px;
-  float: left;
-  
+    float: left;
   background-color: rgb(160, 187, 237);
   border-radius: 10px;
-   
   
 }
 
