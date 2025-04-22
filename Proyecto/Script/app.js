@@ -120,14 +120,14 @@ const products = [
 
 
 function createProductCard(product) {
-    const card = document.createElement('article');
+    const card = document.createElement('productos-psagph');
     card.classList.add('product-card');
 
-    const img = document.createElement('img-ph');
+    const img = document.createElement('img');
     img.src = product.image;
     img.alt = product.name;
 
-    const title = document.createElement('name');
+    const title = document.createElement('descrip-prod-ph');
     title.textContent = product.name;
 
     const description = document.createElement('p');
