@@ -112,7 +112,7 @@ const products = [
     
 ];
 
-// Removed duplicate declaration of flexProdContainer
+
 
 
 
