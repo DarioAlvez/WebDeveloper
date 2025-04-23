@@ -172,5 +172,31 @@ const grid = document.querySelector('.prod-container');
 // const button = document.querySelector('#btn-add-products');
 // button.addEventListener('click', addProduct);
 
+const buscador = document.querySelector('#busqueda-prod');
+buscador.addEventListener('input', function() {
+    const searchTerm = buscador.value.toLowerCase();
+    const cards = document.querySelectorAll('.product-card');
+
+    cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        if (title.includes(searchTerm)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+});
+
+/*const checkbox = document.querySelector('#chk-ph');
+checkbox.addEventListener('change', function() {
+    const cards = document.querySelectorAll('.product-card');
+    cards.forEach(card => {
+        if (this.checked) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+});*/
 
 
