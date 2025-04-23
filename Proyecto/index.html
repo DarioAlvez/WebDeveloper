@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<HTML lang="español"> <!-- Al setearlo el navegador me sugiere traduccion al español, como el S.O nativo-->
+  
+    <head>      
+      <link  rel="stylesheet" href="./style/esilotproyecto.css"> 
+      <!--Llamada al file de css de proyect para todo el index importante agregar en el head y la ruta ./style/archivo css-->
+      
+      
+    
+    </head>
+    
+
+    <body>
+      
+      <div class="top-intro">
+        <div class="imagenes-logo">
+          <img class="logo-psag" src="./img/logo_2017.png" alt="Imagen no disponible">
+          <div class="textos-header">
+            <h1 class="txt-head">Carga Avanzada de Pedidos</h1>
+            <h4 class="txt-head">Proyecto de catálogo para presentar</h4>
+          </div>
+          <img class="logo-psag" src="./img/logo_felpita.png" alt="Imagen no disponible">
+        </div>
+          <nav class="menu-foot">
+            <ul>
+              <li class="li-menu">
+                <a  href="cargapedidos.html">Carga avanzada de Pedidos</a> <!-- ver por que no puedo cambiar color de fuente desde Css y aca si con Style="Color:"-->
+              </li>
+              <li class="li-menu">
+              <a  href="verpedidos.html">Consulta Pedidos</a>
+              </li>
+              <li class="li-menu">
+                <a  href="nostros.html">Nosotros</a>
+              </li>
+              <li class="li-menu">
+                <a href="contacto.html">Contacto</a>
+              </li>
+              <li class="li-menu">
+                <a href="nuevosproductos.html">Nuevos Productos</a>
+              </li>
+            </ul>
+          </nav>
+      </div>
+        
+        
+        <main>
+          <br>
+          <aside class= "menu-lateral">
+            <label id="lbl-buscar">Buscar:</label>
+            <br>
+            <input id="busqueda-aside" type="search">
+            
+            <div>
+              <br>
+              <label style="margin-top: 4%;">Familia de Productos:</label>
+              <ul class="chkbox-familia">
+                <li> <input id="chk-ph" type="checkbox"> <label>Papel Higienico</label> </li>
+                <li> <input id="chk-rc" type="checkbox"> <label>Rollo de Cocina</label> </li>
+                <li> <input id="chk-serv" type="checkbox"> <label>Servilletas</label> </li>
+                <li> <input id="chk-inst" type="checkbox"> <label>Institucionales</label> </li>
+              </ul>
+            </div>
+
+
+          </aside>
+           
+          <!--REAL-->          
+          <div class="prod-container"></div>
+
+          <!--
+
+          <div class="prod-container">
+            <article>
+              <img class="img-ph" src="img/prods/PH/cartabelladaily.png" alt="No se pudo mostrar la imagen">
+              <h3 class="nombre-prod">Cartabella Daily</p>
+            </article>
+            
+            <article >
+              <img class="img-ph" src="img/prods/PH/felpita50mts.png" alt="No se pudo mostrar la imagen">
+              <h3 class="nombre-prod">Felpita 50 metros</p>
+            </article>
+            
+            <article >
+              <img class="img-ph" src="img/prods/PH/felpita80mtsblanquisimo.png" alt="No se pudo mostrar la imagen">
+              <h3 class="nombre-prod">Felpita Blanquisimo 80 metros</p>
+            </article>
+            
+            <article >
+              <img class="img-ph" src="img/prods/PH/felpitablanquisimo.png" alt="No se pudo mostrar la imagen">
+              <h3 class="nombre-prod">Felpita Blanquisimo</p>
+            </article>
+
+            <article >
+              <img class="img-ph" src="img/prods/PH/felpitadoblehoja30mts.png" alt="No se pudo mostrar la imagen">
+              <h3 class="nombre-prod">Felpita Doble Hoja 30 metros</p>
+            </article>
+
+            <article >
+              <img class="img-ph" src="img/prods/PH/felpitadoblehoja30mtsx6.png" alt="No se pudo mostrar la imagen">
+              <h3 class="nombre-prod">Felpita Doble Hoja 30 metros Pack 6 unidades</p>
+            </article>
+
+            <article >
+              <img class="img-ph" src="img/prods/PH/felpitadobletextura.png" alt="No se pudo mostrar la imagen">
+              <h3 class="nombre-prod">Felpita Doble Hoja con Soft textura</p>
+            </article>
+
+            <article >
+              <img class="img-ph" src="img/prods/PH/felpitafamiliar.png" alt="No se pudo mostrar la imagen">
+              <h3 class="nombre-prod">Felpita Pack Familiar</p>
+            </article>
+
+            <article >
+              <img class="img-ph" src="img/prods/PH/felpitaindustrial8.png" alt="No se pudo mostrar la imagen">
+              <h3 class="nombre-prod">Felpita Institucional 18 Grande</p>
+            </article>
+
+            <article >
+              <img class="img-ph" src="img/prods/PH/felpitainfinity.png" alt="No se pudo mostrar la imagen">
+              <h3 class="nombre-prod">Felpita Infinity</p>
+            </article>
+
+            <article >
+              <img class="img-ph" src="img/prods/PH/felpitakids.png" alt="No se pudo mostrar la imagen">
+              <h3 class="nombre-prod">Felpita Kids Decorado</p>
+            </article>
+
+            <article >
+              <img class="img-ph" src="img/prods/PH/felpitasuperpack24.png" alt="No se pudo mostrar la imagen">
+              <h3 class="nombre-prod">Felpita Super Pack 24 unidades Familiar </p>
+            </article>
+
+            <article >
+              <img class="img-ph" src="img/prods/PH/felpitax12 familiar.png" alt="No se pudo mostrar la imagen">
+              <h3 class="nombre-prod">Felpita Pack 12 unidades Familiar</p>
+            </article>
+
+            <article >
+              <img class="img-ph" src="img/prods/PH/felpitax6familiar.png" alt="No se pudo mostrar la imagen">
+              <h3 class="nombre-prod">Felpita Pack 6 unidades Familiar</p>
+            </article>
+
+            <article >
+              <img class="img-ph" src="img/prods/PH/floripel.png" alt="No se pudo mostrar la imagen">
+              <h3 class="nombre-prod">Floripel 4 unidades</p>
+            </article>
+
+            <article >
+              <img class="img-ph" src="img/prods/PH/softpaper.png" alt="No se pudo mostrar la imagen">
+              <h3 class="nombre-prod">Softpaper 4 unidades</p>
+            </article>
+          </div>
+          <br>
+          <br> --> 
+          
+          
+        <!--<div style="text-align: center";>
+            <p style="font-size: x-large;"> Acceso al formulario de carga de pedidos</p><a href="cargapedidos.html">
+            <button class= "boton-carga" type="button">Ir</button></a>
+          </div>  -->
+
+          <button id="#btn-add-products" class="boton-carga" type="button">Agregar Productos</button>
+         
+        </main>
+        <br>
+        <br>
+        <footer>
+        <p class="derechosreservados" style="text-align: center;">Todos los derechos reservados por 
+          <a href="https://www.psag.com.ar">Papelera San Andrés de Giles</a> ©.</p>
+
+        </footer>
+    </body>
+
+     <script src="Script/app.js"></script>  <!--activar js-->
+   
+
+</HTML>
