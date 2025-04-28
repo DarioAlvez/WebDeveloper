@@ -125,7 +125,7 @@ function createProductCard(product) {
     img.src = product.image;
     img.alt = product.name;
 
-    const title = document.createElement('h3');
+    const title = document.createElement('nombre-prod');
     title.classList.add('nombre-prod');
     title.textContent = product.name;
 
