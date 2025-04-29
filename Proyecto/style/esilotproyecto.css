@@ -111,7 +111,7 @@ aside
 
   padding-left: 10px;
   margin-left: 0px;
-    float: left;
+  float: left;
   background-color: rgb(160, 187, 237);
   border-radius: 10px;
   
@@ -180,7 +180,7 @@ aside
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  cursor: pointer;
+  
 }
 
   
