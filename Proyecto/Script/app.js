@@ -118,32 +118,34 @@ const products = [
 
 function createProductCard(product) {
     const card = document.createElement('article');
-    card.classList.add('product-card');
+    //card.classList.add('product-card');
 
 
     const img = document.createElement('img');
     img.src = product.image;
     img.alt = product.name;
+    img.classList.add('img-ph');
+
 
     const title = document.createElement('h3');
     title.classList.add('nombre-prod');
     title.textContent = product.name;
 
-    const description = document.createElement('descripcion-prod');
-    description.classList.add('descripcion-prod');
-    description.textContent = product.description;
+    //const description = document.createElement('descripcion-prod');
+    //description.classList.add('descripcion-prod');
+    //description.textContent = product.description;
 
-    const price = document.createElement('p');
-    price.textContent = `$${product.price}`;
+    //const price = document.createElement('p');
+    //price.textContent = `$${product.price}`;
 
     const button = document.createElement('button');
     button.textContent = 'Comprar';
 
     card.appendChild(img);
     card.appendChild(title);
-    card.appendChild(description);
-    card.appendChild(price);
-    card.appendChild(button);
+    //card.appendChild(description);
+    //card.appendChild(price);
+    //card.appendChild(button);
 
     return card;
 };
