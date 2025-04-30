@@ -1,4 +1,3 @@
-
 .Container-carga-pedidos
 {
     padding-top: 20vh;
@@ -72,8 +71,7 @@
     cursor: pointer;
     font-size: large;
     
- 
-}
+ }
 .cod-prod-cant
 {
     display: flex;
@@ -89,8 +87,6 @@
     }
     
 }
-
-
 #datepicker-fechas-pedido
 {
     display: flex;
@@ -112,28 +108,20 @@
 .date-fecha-carga
 {
     margin-right: 5%;
-}
-
-  
+} 
 #observaciones-multilinea
 {
-
     margin-top: 20px;
     padding: 10px;
-
 }
 
 #fecha-actual
 {   
     text-align: center;
     border: 1px solid #090707;
-
-
 }
-
 #agregar-campo
 {
-
     display: block;
     justify-content: center;
     background-color: #3871c5;
@@ -143,6 +131,4 @@
     cursor: pointer;
     font-size: small;
     margin-top: 15px;
-
-
 }
