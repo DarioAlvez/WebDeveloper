@@ -157,7 +157,7 @@ function addProduct() {
         name: "Nuevo Producto",
         description: "Descripción del nuevo producto",
         image: "./img/logo_felpita.png",
-        price: XXX
+        price: "XXX"
     };
 
     const card = createProductCard(newProduct);
