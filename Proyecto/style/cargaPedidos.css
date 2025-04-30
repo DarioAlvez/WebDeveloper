@@ -9,6 +9,10 @@
     height: 100px;
     width: 600px;
     margin: 20px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #3871c5;
+    resize: none;
 }
 
 .multilinea-obs label
@@ -42,6 +46,14 @@
     flex-wrap: wrap;
     align-content: center;
     align-items: flex-end;
+    input
+    {
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #3871c5;
+        width: 150px;
+        height: 5px;
+    }
 }
 .contenedor-botones {
     margin-top: 15px;
@@ -68,7 +80,12 @@
     padding: 10px;
     input
     {
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #3871c5;
+        width: 150px;
         margin-right: 10px;
+        height: 5px;
     }
     
 }
@@ -84,6 +101,13 @@
     flex-wrap: wrap;
     align-content: center;
     align-items: flex-end;
+    input
+        {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #3871c5;
+           
+        }
 }
 .date-fecha-carga
 {
@@ -118,6 +142,7 @@
     border-radius: 10px;
     cursor: pointer;
     font-size: small;
+    margin-top: 15px;
 
 
 }

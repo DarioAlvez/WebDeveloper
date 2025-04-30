@@ -5,11 +5,11 @@
     display: grid;
     align-content: center;
     height: auto;
-  grid-template-columns: auto 1fr  ;
+    grid-template-columns: auto 1fr  ;
     grid-template-rows: 2fr ;
         label
         {
-            font-size: larger;
+            font-size: medium;
             padding: 10px;
 
 
@@ -18,17 +18,19 @@
             padding: 10px;
             border-radius: 10px;
             border: 1px solid #3871c5;
-            width: 300px;
+            width: 150px;
+            height: 5px;
         }
          
         textarea {
             padding: 10px;
             border-radius: 10px;
             border: 1px solid #3871c5;
-            width: 300px;
+            width: 250px;
             height: 100px;
+            resize: none;
         }
-        textarea{resize: none}
+        
     
     
 }
