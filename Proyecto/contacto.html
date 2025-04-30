@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="./style/estilocontacto.css">
+    <link rel="stylesheet" href="./style/cargaPedidos.css">
+    <link rel="stylesheet" href="./style/contacto.css">
+    <link rel="stylesheet" href="./style/proyecto.css">
 </head>
 <body>
-    <h4>.... Web en construccion, disculpe las molestias </h4>
-    <br>
-    <br>
-        <img style="display: block; align-items: center;" src="img/logo_2017.png" alt="construccion">
+    <div class="top-intro">
+        <div class="imagenes-logo">
+          <img class="logo-psag" src="./img/logo_2017.png" alt="Imagen no disponible">
+          <div class="textos-header">
+            <h1 class="txt-head">Carga Avanzada de Pedidos</h1>
+            <h4 class="txt-head "> "Proyecto de catálogo para presentar"</h4>
+        </div>
+          <img class="logo-psag" src="./img/logo_felpita.png" alt="Imagen no disponible">
+        </div>
+          <nav class="menu-foot">
+            <ul>
+              <li class="li-menu">
+                <a href="index.html">Catalogo</a> <!-- ver por que no puedo cambiar color de fuente desde Css y aca si con Style="Color:"-->
+              </li>
+              <li class="li-menu">
+              <a href="verpedidos.html">Consulta Pedidos</a>
+              </li>
+              <li class="li-menu">
+                <a href="nostros.html">Nosotros</a>
+              </li>
+              <li class="li-menu">
+                <a href="contacto.html">Contacto</a>
+              </li>
+              <li class="li-menu">
+                <a href="nuevosproductos.html">Nuevos Productos</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+            <!-- <img class="img-institucional" src="./img/psag-300x160.jpg" alt="Imagen no disponible"> -->
+        <form>
+            <div id="form-contacto">
+            <h1 >Contactenos</h1>
+            <br>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre"><br><br>
+            <label for="apellido">Apellido:</label><br>
+            <input type="text" id="apellido" name="apellido"><br><br>
+            <label for="email">Mail:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="telefono">Telefono:</label><br>
+            <input type="text" id="telefono" name="telefono"><br><br>
+            <label for="asunto">Asunto:</label><br>            
+            <input type="text" id="asunto" name="asunto"><br><br>   
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje"></textarea><br><br>
+
+            <div class="contenedor-botones">
+                <button class="botones-pedidos" type="submit">Enviar</button>
+                <button class="botones-pedidos" type="reset">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p class="derechosreservados" style="text-align: center;">Todos los derechos reservados por 
+          <a href="https://www.psag.com.ar">Papelera San Andrés de Giles</a> ©.</p>
+    </footer>
 </body>
 </html>

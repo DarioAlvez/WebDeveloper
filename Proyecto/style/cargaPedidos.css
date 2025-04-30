@@ -1,8 +1,6 @@
 
 .Container-carga-pedidos
 {
-   
-
     padding-top: 20vh;
 }
 .multilinea-obs
@@ -17,7 +15,6 @@
 {
     display: block; 
     text-align: left; 
-    /*margin-left: 20px;*/
     margin-bottom: 10px;
 
 }
@@ -35,9 +32,6 @@
     align-items: center;
     
 }
-
-
-
 .carga-pedidos-data 
 {
     display: flex;
@@ -49,7 +43,6 @@
     align-content: center;
     align-items: flex-end;
 }
-
 .contenedor-botones {
     margin-top: 15px;
     display: flex;
