@@ -49,9 +49,12 @@
                 <label >Fecha de carga: <input type="date"  readonly="true" id="fecha-actual"></label>
                 <label>Fecha de entrega: <input id="date-fecha-entrega" type="date"></label>
               </div>
-              <div class="cod-prod-cant">
-                <label>Codigo Producto: <input>         Cant: <input></label><button type="submit" id="agregar-campo">Agregar</button>                                              
-              </div>                
+              <div id="contenedor-campos">
+                <div class="cod-prod-cant">
+                  <label>Codigo Producto: <input>         Cant: <input></label>
+                </div>
+              </div>
+              <button type="button" id="agregar-campo">Agregar Producto</button>                                              
               <div id="observaciones-multilinea">
                 <label>Observaciones:</label>
                 <textarea class="multilinea-obs" name="textarea" ></textarea>
