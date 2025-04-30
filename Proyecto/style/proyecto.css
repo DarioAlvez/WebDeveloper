@@ -59,6 +59,18 @@ body {
   grid-template-rows: 1fr 1fr;
   margin-left: 15%; 
 } 
+.btn-agregar-carrito{
+  display: block;
+  justify-content: center;
+  background-color: #3871c5;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: medium;
+  margin-top: 5px;
+  cursor: pointer;  
+  
+}
 .menu-foot
 {
    
@@ -213,6 +225,19 @@ aside
   border-radius: 5px;
   cursor: pointer;
   
-
 }
+#busqueda-prod
+{
+  display: block;
+  justify-content: center;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 20px auto;
+  border-radius: 5px;
+  cursor:text;
+  
+}
+
+
   

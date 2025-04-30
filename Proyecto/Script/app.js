@@ -140,8 +140,8 @@ function createProductCard(product) {
     price.textContent = `Precio: $${product.price}`;
 
     const button = document.createElement('button');
-    button.classList.add('btn-comprar');
-    button.textContent = 'Comprar';
+    button.classList.add('btn-agregar-carrito');
+    button.textContent = 'Agregar';
 
     card.appendChild(img);
     card.appendChild(title);
@@ -174,23 +174,11 @@ products.forEach( product => {
 const grid = document.querySelector('.prod-container');
 
 const button = document.querySelector('#btn-add-products');
-button.classList.add('#btn-add-products');
+button.classList.add('btn-add-products');
 button.addEventListener('click', addProduct);
 
-const buscador = document.querySelector('#busqueda-prod');
-buscador.addEventListener('input', function() {
-    const busqueda = buscador.value.toLowerCase();
-    const cards = document.querySelectorAll('.product-card');
 
-    cards.forEach(card => {
-        const title = card.querySelector('h3').textContent.toLowerCase();
-        if (title.includes(busqueda)) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-});
+
 
 
 
