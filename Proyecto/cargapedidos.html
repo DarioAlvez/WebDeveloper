@@ -3,12 +3,10 @@
 <HTML lang="es"> <!-- Al setearlo el navegador me sugiere traduccion al español, como el S.O nativo-->
   
     <head>      
-      <link  rel="stylesheet" href="./style/EstiloCargaPedidos.css"> 
+      <link rel="stylesheet" href="./style/EstiloCargaPedidos.css"> 
       <link rel="stylesheet" href="./style/esilotproyecto.css">
     </head>
-
     <body>
-      <!-- <img src="./img/prods/felpitalogo.jpeg">    imagen horrible-->      
       <div class="top-intro">
         <div class="imagenes-logo">
           <img class="logo-psag" src="./img/logo_2017.png" alt="Imagen no disponible">
@@ -19,9 +17,9 @@
           <img class="logo-psag" src="./img/logo_felpita.png" alt="Imagen no disponible">
         </div>
           <nav class="menu-foot">
-            <ol>
+            <ul>
               <li class="li-menu">
-                <a  href="index.html">Catalogo</a> <!-- ver por que no puedo cambiar color de fuente desde Css y aca si con Style="Color:"-->
+                <a  href="index.html">Catalogo</a>
               </li>
               <li class="li-menu">
               <a  href="verpedidos.html">Consulta Pedidos</a>
@@ -35,64 +33,42 @@
               <li class="li-menu">
                 <a href="nuevosproductos.html">Nuevos Productos</a>
               </li>
-            </ol>
+            </ul>
           </nav>
         </div>
-        
         <main>
-            <!-- <img style=" float:right;" src="./img/prods/felpitalogo.jpeg">    imagen horrible-->
-            <div class="Container-carga-pedidos">
-                <form class="formulario-pedidos" method="post" autocomplete="on">
-                    <br>
-                    <div class="carga-pedidos-data">
-
-                        <label class="Lbl-form">Numero de cliente: <input></label>
-                        <label class="Lbl-form">Direccion de entrega: <input maxlength="100"></label>
-                        <label class="Lbl-form">Numero de pedido: <input></label>
-
-                    </div> 
-                    
-                    <div id="datepicker-fechas-pedido">
-                      
-                      <label >Fecha de carga: <input type="date"  readonly="true" id="fecha-actual"></label>
-                      <!--ver como mostrar la fecha de hoy sin poder modificar-->
-                      <label>Fecha de entrega: <input id="date-fecha-entrega" type="date"></label>
-                    </div>
-                    <div class="cod-prod-cant">
-                        <label>Codigo Producto: <input>         Cant: <input></label>
-                        <label>Codigo Producto: <input>         Cant: <input></label>
-                        <label>Codigo Producto: <input>         Cant: <input></label>
-                        <label>Codigo Producto: <input>         Cant: <input></label>
-                        <label>Codigo Producto: <input>         Cant: <input></label>
-                        <label>Codigo Producto: <input>         Cant: <input></label>
-                        <label>Codigo Producto: <input>         Cant: <input></label>
-                    </div>  
-                    <div id="observaciones-multilinea">
-                      <label>Observaciones:</label>
-                      <!-- Multilinea para campo observaciones-->
-                      <textarea class="multilinea-obs" name="textarea" ></textarea>
-                    </div>                  
-                 
-                    
-                    
-                    <div class="contenedor-botones">
-                      <button class="botones-pedidos" type="submit">Cargar</button>
-                      <button class="botones-pedidos" type="reset">Cancelar</button>
-                    </div>
-                   
-                    <!--<a id="boton-consultar" href="verpedidos.html" class="button-link">Consultar</a> -->
-
-
-                </form>
+          <div class="Container-carga-pedidos">
+            <form class="formulario-pedidos" method="post" autocomplete="on">
+              <br>
+              <div class="carga-pedidos-data">
+                <label class="Lbl-form">Numero de cliente: <input></label>
+                <label class="Lbl-form">Direccion de entrega: <input maxlength="100"></label>
+                <label class="Lbl-form">Numero de pedido: <input></label>
+                </div>
+              <div id="datepicker-fechas-pedido">
+                <label >Fecha de carga: <input type="date"  readonly="true" id="fecha-actual"></label>
+                <label>Fecha de entrega: <input id="date-fecha-entrega" type="date"></label>
+              </div>
+              <div class="cod-prod-cant">
+                <label>Codigo Producto: <input>         Cant: <input></label><button type="submit" id="agregar-campo">Agregar</button>                                              
+              </div>                
+              <div id="observaciones-multilinea">
+                <label>Observaciones:</label>
+                <textarea class="multilinea-obs" name="textarea" ></textarea>
+              </div>
+              <div class="contenedor-botones">
+                <button class="botones-pedidos" type="submit">Cargar</button>
+                <button class="botones-pedidos" type="reset">Cancelar</button>
+              </div>
+            </form>
             </div>           
         </main>
         <footer>
             <p class="derechosreservados" style="text-align: center;">Todos los derechos reservados por 
               <a href="https://www.psag.com.ar">Papelera San Andrés de Giles</a> ©.</p>
-    
         </footer>
-
     </body>
-    <script src="Script/cargaped.js"></script>  <!--activar js-->
+    
+  <script src="script/cargaped.js"></script>  <!--activar js-->
 
 </html>

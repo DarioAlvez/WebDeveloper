@@ -131,21 +131,23 @@ function createProductCard(product) {
     title.classList.add('nombre-prod');
     title.textContent = product.name;
 
-    //const description = document.createElement('descripcion-prod');
-    //description.classList.add('descripcion-prod');
-    //description.textContent = product.description;
+    const description = document.createElement('descripcion-prod');
+    description.classList.add('descripcion-prod');
+    description.textContent = product.description;
 
-    //const price = document.createElement('p');
-    //price.textContent = `$${product.price}`;
+    const price = document.createElement('precio-prod');
+    price.classList.add('precio-prod');
+    price.textContent = `Precio: $${product.price}`;
 
     const button = document.createElement('button');
+    button.classList.add('btn-comprar');
     button.textContent = 'Comprar';
 
     card.appendChild(img);
     card.appendChild(title);
-    //card.appendChild(description);
-    //card.appendChild(price);
-    //card.appendChild(button);
+    card.appendChild(description);
+    card.appendChild(price);
+    card.appendChild(button);
 
     return card;
 };
@@ -154,8 +156,8 @@ function addProduct() {
     const newProduct = {
         name: "Nuevo Producto",
         description: "Descripción del nuevo producto",
-        image: "./img/image-google.png",
-        price: 20
+        image: "./img/logo_felpita.png",
+        price: XXX
     };
 
     const card = createProductCard(newProduct);
@@ -171,8 +173,9 @@ products.forEach( product => {
 
 const grid = document.querySelector('.prod-container');
 
-// const button = document.querySelector('#btn-add-products');
-// button.addEventListener('click', addProduct);
+const button = document.querySelector('#btn-add-products');
+button.classList.add('#btn-add-products');
+button.addEventListener('click', addProduct);
 
 const buscador = document.querySelector('#busqueda-prod');
 buscador.addEventListener('input', function() {
@@ -188,6 +191,8 @@ buscador.addEventListener('input', function() {
         }
     });
 });
+
+
 
 
 

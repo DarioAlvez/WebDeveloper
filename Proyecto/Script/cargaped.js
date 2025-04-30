@@ -2,3 +2,4 @@
 
 const fecha = new Date();
 document.getElementById("fecha-actual").value = fecha.toJSON().slice(0,10);
+

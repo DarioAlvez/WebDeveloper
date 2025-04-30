@@ -40,6 +40,9 @@
     gap: 20px;
     width: 500px;
     padding: 10px;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-end;
 }
 
 .contenedor-botones {
@@ -50,32 +53,39 @@
 }
   
 .contenedor-botones button {
-    padding: 8px 16px;
-    border-radius: 6px;
+    display: block;
+    justify-content: center;
+    background-color: #3871c5;
+    color: white;
+    padding: 5px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: large;
+    
  
 }
 .cod-prod-cant
 {
     display: flex;
-    flex-direction: column;
-    position: relative;
-    row-gap: 20px;
     padding: 10px;
-    margin-top: 10px;
+    input
+    {
+        margin-right: 10px;
+    }
+    
 }
 
 
 #datepicker-fechas-pedido
 {
-    
-    position: inherit;
-    justify-content: left;
     display: flex;
-    flex-direction: row;
-    column-gap: 40px;
+    flex-direction: column;
+    gap: 20px;
     width: 500px;
     padding: 10px;
-    
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-end;
 }
 .date-fecha-carga
 {
@@ -95,6 +105,21 @@
 {   
     text-align: center;
     border: 1px solid #090707;
+
+
+}
+
+#agregar-campo
+{
+
+    display: block;
+    justify-content: center;
+    background-color: #3871c5;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: small;
 
 
 }
