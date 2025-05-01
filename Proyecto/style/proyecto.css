@@ -1,21 +1,15 @@
-body {
-  
+/* Media Query para dispositivos móviles (máximo 768px) */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px; 
+    width: 100%;      /*toda la pantalla de ancho para salida de viewports en celus*/
+  }
+}
+body {  
   width: 100%;
   height: 100%;
   margin: 0 auto;
 }
-
-/* Media Query para dispositivos móviles (máximo 768px) */
-@media only screen and (max-width: 768px) {
-  body {
-    font-size: 14px; /* Reducir el tamaño de la fuente */
-    width: 95%;      /* Aumentar el ancho para pantallas pequeñas */
-  }
-  /* Otros estilos para dispositivos móviles */
-}
-
-
-
 .top-intro
 {
   position: fixed;
@@ -235,9 +229,19 @@ aside
   border: none;
   padding: 20px auto;
   border-radius: 5px;
-  cursor:text;
-  
+  cursor:text;  
 }
+#institucional
+{
+padding-top: 20vh;
+padding-left: 2vb;
+}
+#contenido-nostros
+{
+  background-image: url(../img/home_bg_color.jpg);
+  width: 100%;
+  max-height: fit-content;
 
 
+}
   
