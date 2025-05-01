@@ -190,9 +190,7 @@ aside
   font-size: medium;
   font-weight: bold;
   line-height: 1.5;
-  display: flex
-;
-
+  display: flex;
 }
 .precio-prod
 {
@@ -207,7 +205,6 @@ aside
   text-align:left;
   font-weight: bold;
 }
-
 .btn-comprar
 {
   display: block;
@@ -217,8 +214,7 @@ aside
   border: none;
   padding: 20px auto;
   border-radius: 5px;
-  cursor: pointer;
-  
+  cursor: pointer;  
 }
 #busqueda-prod
 {
@@ -240,7 +236,10 @@ aside
   border-radius: 10px;
   width: 80vh;
   height: 45vh;
-
+  p { 
+    text-align: justify;
+    font-size:smaller;
+    } 
 }
 #contenido-nostros
 {
