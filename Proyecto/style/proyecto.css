@@ -235,10 +235,10 @@ aside
   background-color: #ffffff;
   border-radius: 10px;
   width: 80vh;
-  height: 45vh;
+  height: 25vh;
   p { 
     text-align: justify;
-    font-size:smaller;
+    font-size:medium;
     } 
 }
 #contenido-nostros
