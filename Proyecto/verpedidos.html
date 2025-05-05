@@ -40,16 +40,47 @@
       </div>
       <div class="consulta-pedidos-top">      
         <h3 style="padding-top: 25vh; text-align: center;font-size: xx-large;">Busqueda de Pedido cargado</h3>
-        <div id="grid-busqueda-pedido">
-            
+        <div id="flex-busqueda-pedido">
+          <label for="busqueda-pedido">Ingrese el número de pedido:</label>
+          <input id="busqueda-pedido" type="text">
+          <label for="busqueda-pedido">Ingrese el número de cliente:</label>
+          <input id="busqueda-cliente" type="text">
+          <label for="busqueda-pedido">Ingrese Fecha de carga de pedido:</label>
+          <input id="busqueda-fecha" type="date">
+          <button id="btn-buscar-pedido" class="boton-carga" type="button">Buscar</button>
+        </div> 
       </div>
+      <div class="consulta-pedidos-bottom">
+        <div id="flex-resultados-pedido">
+          <table id="tabla-resultado">
+            <thead>
+              <tr>
+                <th>Pedido</th>
+                <th>Cliente</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-resultados">
+              <tr>
+                <td>12345</td>
+                <td>Juan Perez</td>
+                <td>9/04/2025</td>
+                <td>En Proceso</td>
+              </tr>
+              <tr>
+                <td>67890</td>
+                <td>Carlos Alvarez</td>
+                <td>12/03/2025</td>
+                <td>Completado</td>
+              </tr>              
+            </tbody>
+          </table>
+        </div>
     </main>
-
-
-
     <footer>
      <p class="derechosreservados" style="text-align: center;">Todos los derechos reservados por 
      <a href="https://www.psag.com.ar">Papelera San Andrés de Giles</a> ©.</p>
     </footer>
   </body>
-  </HTML>
+</HTML>

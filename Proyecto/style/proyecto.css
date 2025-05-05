@@ -250,6 +250,56 @@ aside
   background-repeat: no-repeat;
   background-size: cover;
 
+}
+
+#flex-busqueda-pedido
+{ 
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 500px;
+  padding: 10px;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: flex-end;
+  input
+  {
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #3871c5;
+      width: 150px;
+      height: 5px;
+  }
+  
+}
+#btn-buscar-pedido{
+
+  display: block;
+  justify-content: center;
+  background-color: #3871c5;
+  color: white;
+  padding: 5px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: large;
+
+}
+
+#tabla-resultado
+{
+  border-collapse: collapse;
+  width: 50vh;
+  border: #3871c5 solid 3px;
+  border-radius: 8px;
+  margin-top: 5vh;
+  margin-left: 5vh; 
+  background-color: #ffffff;
+  th, td {
+    border: #3871c5 solid 3px;
+    padding: 10px;
+    text-align: center;
+  }
+
 
 }
   
