@@ -6,11 +6,12 @@
   background-color: #ffffff;
   border-radius: 10px;
   width: 80vh;
-  height: 25vh;
-  p { 
+  height: auto;
+  p 
+  { 
     text-align: justify;
     font-size:medium;
-    } 
+  } 
 }
 #contenido-nostros
 {
