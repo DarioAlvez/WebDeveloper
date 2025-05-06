@@ -1,4 +1,10 @@
-
+/* Media Query para dispositivos móviles (máximo 768px) 
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px; 
+    width: 100%;      /*toda la pantalla de ancho para salida de viewports en celus*/
+  }
+ }
 
           
 

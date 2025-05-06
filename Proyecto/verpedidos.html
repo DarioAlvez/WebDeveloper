@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<HTML lang="español"> <!-- Al setearlo el navegador me sugiere traduccion al español, como el S.O nativo-->
+<HTML lang="es"> <!-- Al setearlo el navegador me sugiere traduccion al español, como el S.O nativo-->
   
   <head>      
-    <link rel="stylesheet" href="./style/cargaPedidos.css">
-    <link rel="stylesheet" href="./style/contacto.css">
-    <link rel="stylesheet" href="./style/proyecto.css">
+    <link rel="stylesheet" href="./style/verpedidos.css">
+    <link rel="stylesheet" href="./style/proyecto.css" >   
   </head>
   <body>
     <main>
@@ -38,21 +37,23 @@
             </ul>
           </nav>
       </div>
+      <div class="separador-header"></div>
       <div class="consulta-pedidos-top">      
-        <h3 style="padding-top: 25vh; text-align: center;font-size: xx-large;">Busqueda de Pedido cargado</h3>
+        <h3 style="font-size: xx-large;">Busqueda de Pedido cargado</h3>
         <div id="flex-busqueda-pedido">
-          <label for="busqueda-pedido">Ingrese el número de pedido:</label>
+          <label>Ingrese el número de pedido:</label>
           <input id="busqueda-pedido" type="text">
-          <label for="busqueda-pedido">Ingrese el número de cliente:</label>
+          <label>Ingrese el número de cliente:</label>
           <input id="busqueda-cliente" type="text">
-          <label for="busqueda-pedido">Ingrese Fecha de carga de pedido:</label>
+          <label>Ingrese Fecha de carga de pedido:</label>
           <input id="busqueda-fecha" type="date">
-          <button id="btn-buscar-pedido" class="boton-carga" type="button">Buscar</button>
+          <button id="btn-buscar-pedido" class="boton-carga" type="submit">Buscar</button>
         </div> 
       </div>
-      <div class="consulta-pedidos-bottom">
+        <div class="consulta-pedidos-bottom">
         <div id="flex-resultados-pedido">
           <table id="tabla-resultado">
+            <h4 style="text-align: center;">Resultado</h4>
             <thead>
               <tr>
                 <th>Pedido</th>
