@@ -2,7 +2,7 @@
 const products = [
     {
         name: "Cartabella Daily",
-        description: "Cartabella Daily es un papel higiénico de 2 capas,\nsuave y resistente, ideal para el uso diario.",
+        description: "Cartabella Daily es un papel higiénico de 2 capas,suave y resistente.",
         image: "img/prods/PH/cartabelladaily.png",
         price: 15
     },  
