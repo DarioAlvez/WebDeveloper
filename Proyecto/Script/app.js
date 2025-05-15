@@ -1,10 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const menu = document.querySelector('.menu-foot');
 
-  menu.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
-});
+
 const products = [
     {
         name: "Cartabella Daily",
@@ -118,13 +113,9 @@ const products = [
     
 ];
 
-
-
-
-
 function createProductCard(product) {
     const card = document.createElement('article');
-    //card.classList.add('product-card');
+    card.classList.add('card-product'); 
 
 
     const img = document.createElement('img');
@@ -137,11 +128,11 @@ function createProductCard(product) {
     title.classList.add('nombre-prod');
     title.textContent = product.name;
 
-    const description = document.createElement('descripcion-prod');
+    const description = document.createElement('p');
     description.classList.add('descripcion-prod');
     description.textContent = product.description;
 
-    const price = document.createElement('precio-prod');
+    const price = document.createElement('p');
     price.classList.add('precio-prod');
     price.textContent = `Precio: $${product.price}`;
 
@@ -158,17 +149,17 @@ function createProductCard(product) {
     return card;
 };
 
-function addProduct() {
-    const newProduct = {
-        name: "Nuevo Producto",
-        description: "Descripción del nuevo producto",
-        image: "./img/logo_felpita.png",
-        price: "XXX"
-    };
-
-    const card = createProductCard(newProduct);
-    flexProdContainer.appendChild(card);
-}
+//function addProduct() {
+//    const newProduct = {
+//        name: "Nuevo Producto",
+//        description: "Descripción del nuevo producto",
+//        image: "./img/logo_felpita.png",
+//        price: "XXX"
+//    };
+//
+//    const card = createProductCard(newProduct);
+//    flexProdContainer.appendChild(card);
+// };
 
 const flexProdContainer = document.querySelector('.prod-container');
 
@@ -176,12 +167,11 @@ products.forEach( product => {
     const card = createProductCard(product);
     flexProdContainer.appendChild(card);
 });
-
 const grid = document.querySelector('.prod-container');
 
-const button = document.querySelector('#btn-add-products');
-button.classList.add('btn-add-products');
-button.addEventListener('click', addProduct);
+//const button = document.querySelector('#btn-add-products');
+//button.classList.add('btn-add-products');
+//button.addEventListener('click', addProduct);
 
 
 

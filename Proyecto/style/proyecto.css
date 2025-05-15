@@ -1,4 +1,3 @@
-/* RESET BÁSICO */
 * {
   margin: 0;
   padding: 0;
@@ -7,181 +6,262 @@
 
 body {
   font-family: Arial, sans-serif;
-  padding-top: 80px; /* Espacio para top-intro fijo */
   background-color: #f5f5f5;
+  padding-top: 120px; /* ubicacion header */
 }
 
-/* TOP INTRO */
+
 .top-intro {
   position: fixed;
   top: 0;
   width: 100%;
-  background: linear-gradient(to bottom right, rgb(146, 155, 163), rgb(26, 101, 172));
-  z-index: 1;
-  padding: 10px;
+  background: linear-gradient(to right, #002147, #dcdcdc);
+  color: white;
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+}
+
+.top-intro h1 {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.6rem;
 }
 
 .imagenes-logo {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .logo-psag {
   height: 50px;
-  margin: 5px;
 }
 
 .textos-header {
+  flex: 1;
   text-align: center;
-  flex-grow: 1;
 }
 
-.txt-head {
-  font-size: 1.2em;
-  font-weight: bold;
-}
 
-/* MENU FOOT (hamburguesa en móviles) */
+
 .menu-foot ul {
   display: flex;
   justify-content: center;
-  list-style: none;
-  gap: 20px;
+  gap: 15px;
   flex-wrap: wrap;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.menu-foot li {
+  background-color: #002147;
+  border-radius: 5px;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
 }
 
 .menu-foot a {
   text-decoration: none;
-  color: #333;
+  color: white;
   font-weight: bold;
 }
 
-.menu-foot a:hover {
-  color: #005897;
+.menu-foot li:hover {
+  background-color: #dcdcdc;
 }
 
-/* ASIDE como barra horizontal */
+.menu-foot li:hover a {
+  color: #002147;
+}
+
+main {
+  display: grid;
+  grid-row: auto;
+  gap: 20px;
+  padding: 20px;
+  margin-left: 220px; /*menu lateral*/
+  
+}
+
+
 .menu-lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: linear-gradient(to right, #b9bbbe, #fad502);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 0; /* detrás de top-intro */
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  background: #e0cd99be;
-  padding: 15px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin-top: 1vh;
-  width: 100%;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 130px;
 }
 
 .menu-lateral label {
+  color: #002147;
   font-weight: bold;
 }
 
 .chkbox-familia {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
   list-style: none;
-  padding: 2px;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-
-/* CONTENEDOR DE PRODUCTOS */
-.prod-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 15px;
-  padding: 15px;
-}
-
-/* BOTÓN */
-.boton-carga {
-  display: block;
-  margin: 20px auto;
+.boton-carrito {
+  margin-top: 20px;
   padding: 10px 20px;
-  background-color: #0077cc;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #002147;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.boton-carga:hover {
-  background-color: #005fa3;
-}
-
-/* FOOTER */
 footer {
-  text-align: center;
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #1c7bcf;
+    position: relative;
+    z-index: 10; 
+    bottom: 0;
+    padding: 20px 30px;
+    text-align: center;
+    background: linear-gradient(to right, #002147, #dcdcdc);
+    
 }
 
-/* HAMBURGUESA EN MÓVILES */
+footer a {
+  text-decoration: none;
+  color: #f0c040;
+  font-weight: bold;
+}
+.prod-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.card-product {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s;
+}
+
+.card-product:hover {
+  transform: scale(1.02);
+}
+
+.card-product img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.nombre-prod {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.descripcion-prod {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 10px 0;
+  flex-grow: 1;
+}
+
+.precio-prod {
+  font-weight: bold;
+  margin: 10px 0;
+  color: #002147;
+}
+
+.btn-agregar-carrito {
+  background-color: #002147;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-agregar-carrito:hover {
+  background-color: #004080;
+}
 @media screen and (max-width: 768px) {
-  .menu-foot ul {
-    display: none;
+    main {
     flex-direction: column;
-    background-color: #ffffff;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   }
 
-  .menu-foot.active ul {
-    display: flex;
+  .menu-lateral {
+    width: 100%;
+    height: auto;
+    position: static;
+    flex-direction: column;
   }
 
-  .menu-foot::before {
-    content: "☰";
-    font-size: 28px;
-    cursor: pointer;
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-  }
-
-  .menu-foot li {
-    padding: 10px;
+  .prod-container {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
   }
 
   .imagenes-logo {
-    justify-content: center;
-  }
-
-  .textos-header {
-    font-size: 0.9em;
-  }
-
-  .menu-lateral {
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .chkbox-familia {
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 768px) {
-  main {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .menu-lateral {
-    order: -1; /* Aparece primero en el flujo de main */
-    flex-direction: column;
-    width: 100%;
-    background-color: #ffffff;
-    padding: 10px;
     gap: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
 
-  .chkbox-familia {
+  .menu-foot ul {
     flex-direction: column;
+    align-items: center;
   }
 }
+#btn-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #002147;
+  color: white;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#btn-flotante:hover {
+  background-color: #004080;
+  transform: scale(1.1);
+}
+@media screen and (min-width: 1200px) {
+  .prod-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+
+
+
+
+

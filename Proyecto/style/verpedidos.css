@@ -1,9 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding-top: 120px; /* ubicacion header */
+}
+
+.top-intro {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #002147, #dcdcdc);
+  color: white;
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+}
+
+.top-intro h1 {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.imagenes-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-psag {
+  height: 50px;
+}
+
+.textos-header {
+  flex: 1;
+  text-align: center;
+}
+
+
+
+.menu-foot ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.menu-foot li {
+  background-color: #002147;
+  border-radius: 5px;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.menu-foot a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.menu-foot li:hover {
+  background-color: #dcdcdc;
+}
+
+.menu-foot li:hover a {
+  color: #002147;
+}
+
+main {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;   
+  padding: 20px;
+}
+
 .consulta-pedidos-top
 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5vh;
     padding: 10px;
 }
 #flex-busqueda-pedido
@@ -45,24 +130,40 @@
     align-items: center;
     padding-top: 5vh;
 
-    #tabla-resultado
-    {
-        padding-top: 25px;
+      #tabla-resultado {
+        width: 90vw; /* Mejor que 50vh para dispositivos móviles */
+        max-width: 800px; /* Limita el ancho en pantallas grandes */
+        overflow-x: auto; /* Permite scroll horizontal si es necesario */
         border-collapse: collapse;
-        width: 50vh;
         border: #3871c5 solid 3px;
         border-radius: 8px;
         margin-top: 5vh;
-        margin-left: 5vh; 
         background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        padding: 10px;}
         th, td 
         {
           border: #3871c5 solid 3px;
           padding: 10px;
           text-align: center;
         }
-    }
-
 }
 
-footer { position: center; }
+
+
+footer {
+    position: fixed;
+    z-index: 10; 
+    bottom: 0;
+    padding: 20px 30px;
+    text-align: center;
+    background: linear-gradient(to right, #002147, #dcdcdc);
+    width: 100%;    
+}
+
+footer a {
+  text-decoration: none;
+  color: #f0c040;
+  font-weight: bold;
+  
+}

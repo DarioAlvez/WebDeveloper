@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <HTML lang="es">  
   <head>      
     <link  rel="stylesheet" href="./style/proyecto.css">       
@@ -12,11 +11,11 @@
           <h1 class="txt-head">Portal de Productos PSAG</h1>            
         </div>
         <img class="logo-psag" src="./img/logo_felpita.png" alt="Imagen no disponible">
-      </div>
+      </div>      
         <nav class="menu-foot">
           <ul>
             <li class="li-menu">
-              <a href="cargapedidos.html">Carga avanzada de Pedidos</a> <!-- ver por que no puedo cambiar color de fuente desde Css y aca si con Style="Color:"-->
+              <a href="cargapedidos.html">Carga avanzada de Pedidos</a>
             </li>
             <li class="li-menu">
               <a href="verpedidos.html">Consulta Pedidos</a>
@@ -26,10 +25,14 @@
             </li>
             <li class="li-menu">
               <a href="contacto.html">Contacto</a>
+            </li> 
+            <li class="li-menu">
+              <a href="carrito.html">Ver carrito</a>
             </li>              
           </ul>
         </nav>
       </div>
+      <a href="cargapedidos.html" id="btn-flotante" title="Ir al carrito">🛒</a>
       <main>
         <aside class= "menu-lateral">
           <label id="lbl-buscar">Buscar:</label>
@@ -44,14 +47,11 @@
           </div>
         </aside>
       <div class="prod-container"></div>
-      <button id="btn-add-products" class="boton-carga" type="button">Agregar Nuevo Producto</button>
       </main>
-      <br>
-      <br>
       <footer>
       <p class="derechosreservados" style="text-align: center;">Todos los derechos reservados por 
       <a href="https://www.psag.com.ar">Papelera San Andrés de Giles</a> ©.</p>
       </footer>
     </body>
-    <script src="./script/app.js"></script>  <!--activar js-->
+    <script src="./Script/app.js"></script>  <!--activar js-->
 </HTML>
