@@ -1,4 +1,10 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const menu = document.querySelector('.menu-foot');
 
+  menu.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+});
 const products = [
     {
         name: "Cartabella Daily",

@@ -1,209 +1,187 @@
-body {  
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.top-intro
-{
+
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 80px; /* Espacio para top-intro fijo */
+  background-color: #f5f5f5;
+}
+
+/* TOP INTRO */
+.top-intro {
   position: fixed;
-  background-color: #3871c5;  
+  top: 0;
   width: 100%;
-  height: 22vh;
+  background: linear-gradient(to bottom right, rgb(146, 155, 163), rgb(26, 101, 172));
   z-index: 1;
-  
-}
-.img-ph
-{
-  display: flex;
-  justify-content: left;
-  width: 300px;
-  height: 300px;
-  
-}
-.menu-foot
-{
-  width: 100%;
-  text-decoration: none;
-  text-align: center;
-  font-size: larger;
-  position: relative;
-  padding: 5px;
-    
-    ul
-    {
-    display:flex;
-    flex-direction:row;
-    justify-content:space-around;
-    }
-    li{display: inline;
-    background-color: #43454773;}
-    a
-    { text-decoration: none;    
-      color: #ffffff;
-      
-    }
-} 
-.menu-lateral
-{
-  display: flex;
-  flex-wrap: wrap;
-  width: 200px;
-  
-  margin-top: 18vh;
-  margin-left: 0vh;
-  background-color: #43454773;
-
-  #lbl-buscar
-  {
-    position: relative;
-    top: 2px;
-  }
-  #busqueda-aside
-  {
-    position: relative;
-    top: 2px;
-  }
-  
-}
-
-.prod-container
-{
-  display: grid;
-  align-content: center;
-  height: 100%;
-  margin-top: 10%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  margin-left: 15%; 
-} 
-.btn-agregar-carrito{
-  display: block;
-  justify-content: center;
-  background-color: #3871c5;
-  color: white;
-  padding: 5px;
-  border-radius: 10px;
-  font-size: medium;
-  margin-top: 5px;
-  cursor: pointer;  
-  
-}
-
-footer { position: center; }
-
-aside 
-{
-
-  padding-left: 10px;
-  margin-left: 0px;
-  float: left;
-  background-color: #3871c5;
-  border-radius: 10px;
-  
-}
-
-
-.chkbox-familia
-{
-  list-style-type: none
-
-}
-
-.separador-header
-{ 
-  height: 150px;
-
+  padding: 10px;
 }
 
 .imagenes-logo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2%;
-    height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo-psag {
-  width: 15%;
-  max-width: 150px;
+  height: 50px;
+  margin: 5px;
 }
 
 .textos-header {
   text-align: center;
-  flex: 1; /* Hace que el texto ocupe el espacio del medio */
-  margin: 0 20px;
-  
+  flex-grow: 1;
 }
 
 .txt-head {
-  margin: 5px 0;
-}
-
-
-.li-menu
-{
-  border-style: solid; 
-  border-width: 1px;
-  background-color: #3871c5;
-  padding: 5px;
-  border-radius: 10px;
-}
-
-#btn-add-products
-{
-  display: block;
-  justify-content: center;
-  background-color: #3871c5;
-  color: white;
-  padding: 5px 30px;
-  border-radius: 10px;
-  cursor: pointer;
-  margin: 10px auto;
-  font-size: large;
-  margin-top: 8%;
-}
-.descripcion-prod
-{
-  text-align: left;
-  display: inline;
-  font-style: italic;
-  font-size: medium;
+  font-size: 1.2em;
   font-weight: bold;
-  line-height: 1.5;
+}
+
+/* MENU FOOT (hamburguesa en móviles) */
+.menu-foot ul {
   display: flex;
-}
-.precio-prod
-{
-  text-align: left;
-  font-style: italic;
-  font-size: larger;
-  font-weight: bold;
-  line-height: 1.5;  
-}
-.nombre-prod
-{
-  text-align:left;
-  font-weight: bold;
-}
-.btn-comprar
-{
-  display: block;
   justify-content: center;
-  background-color: #3871c5;
+  list-style: none;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu-foot a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.menu-foot a:hover {
+  color: #005897;
+}
+
+/* ASIDE como barra horizontal */
+.menu-lateral {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: #e0cd99be;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: 1vh;
+  width: 100%;
+}
+
+.menu-lateral label {
+  font-weight: bold;
+}
+
+.chkbox-familia {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 2px;
+}
+
+/* CONTENEDOR DE PRODUCTOS */
+.prod-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+/* BOTÓN */
+.boton-carga {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #0077cc;
   color: white;
   border: none;
-  padding: 20px auto;
   border-radius: 5px;
-  cursor: pointer;  
+  cursor: pointer;
 }
-#busqueda-prod
-{
-  display: block;
-  justify-content: center;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  border: none;
-  padding: 20px auto;
-  border-radius: 5px;
-  cursor:text;  
+
+.boton-carga:hover {
+  background-color: #005fa3;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #1c7bcf;
+}
+
+/* HAMBURGUESA EN MÓVILES */
+@media screen and (max-width: 768px) {
+  .menu-foot ul {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  .menu-foot.active ul {
+    display: flex;
+  }
+
+  .menu-foot::before {
+    content: "☰";
+    font-size: 28px;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+
+  .menu-foot li {
+    padding: 10px;
+  }
+
+  .imagenes-logo {
+    justify-content: center;
+  }
+
+  .textos-header {
+    font-size: 0.9em;
+  }
+
+  .menu-lateral {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chkbox-familia {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-lateral {
+    order: -1; /* Aparece primero en el flujo de main */
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px;
+    gap: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .chkbox-familia {
+    flex-direction: column;
+  }
 }
