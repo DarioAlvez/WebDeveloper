@@ -129,12 +129,13 @@ main {
 }
 
 footer {
-    position: relative;
-    z-index: 10; 
+    position: fixed;
+    z-index: 1; 
     bottom: 0;
-    padding: 20px 30px;
+    padding: 15px 25px;
     text-align: center;
     background: linear-gradient(to right, #002147, #dcdcdc);
+    width: 100%;
     
 }
 

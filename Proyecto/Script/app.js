@@ -149,29 +149,51 @@ function createProductCard(product) {
     return card;
 };
 
-//function addProduct() {
-//    const newProduct = {
-//        name: "Nuevo Producto",
-//        description: "Descripción del nuevo producto",
-//        image: "./img/logo_felpita.png",
-//        price: "XXX"
-//    };
-//
-//    const card = createProductCard(newProduct);
-//    flexProdContainer.appendChild(card);
-// };
-
 const flexProdContainer = document.querySelector('.prod-container');
-
 products.forEach( product => {
     const card = createProductCard(product);
     flexProdContainer.appendChild(card);
 });
 const grid = document.querySelector('.prod-container');
 
-//const button = document.querySelector('#btn-add-products');
-//button.classList.add('btn-add-products');
-//button.addEventListener('click', addProduct);
+function addProduct() {
+  const newProduct = {
+  name: "Nuevo Producto",
+  description: "Descripción del nuevo producto",
+  image: "./img/logo_felpita.png",
+  price: "XXX"
+  };
+
+  const card = createProductCard(newProduct);
+  flexProdContainer.appendChild(card);
+}; 
+
+const searchInput = document.getElementById('busqueda-prod');
+function renderProducts(filteredProducts) {
+    flexProdContainer.innerHTML = ''; // Limpiar productos anteriores
+    filteredProducts.forEach(product => {
+        const card = createProductCard(product);
+        flexProdContainer.appendChild(card);
+    });
+}
+
+// Mostrar todos al principio
+renderProducts(products);
+
+// Escuchar cambios en la búsqueda
+searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase();
+    const filtered = products.filter(product =>
+        product.name.toLowerCase().includes(query) ||
+        product.description.toLowerCase().includes(query)
+    );
+    renderProducts(filtered);
+});
+
+
+ 
+
+
 
 
 
