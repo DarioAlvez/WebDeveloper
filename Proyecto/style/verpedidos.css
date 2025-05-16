@@ -121,6 +121,12 @@ main {
         width: 25%;
         text-align: center;
     }
+    button:hover
+    {
+        background-color: #003e85;
+        color: white;
+        transition: 0.3s;
+    }
   
 }
 .consulta-pedidos-bottom
@@ -148,8 +154,6 @@ main {
           text-align: center;
         }
 }
-
-
 
 footer {
     position: fixed;
