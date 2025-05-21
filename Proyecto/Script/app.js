@@ -1,3 +1,4 @@
+
 //creacion de tarjeta de productos a mano
 const products = [
     {
@@ -167,10 +168,7 @@ const flexProdContainer = document.querySelector('.prod-container');
 products.forEach( product => {
     const card = createProductCard(product);
     flexProdContainer.appendChild(card);
-});
-//const grid = document.querySelector('.prod-container');
-
-
+    });
 //funcion para agregar producto parametrizado
 function addProduct() {
   const newProduct = {
@@ -183,8 +181,6 @@ function addProduct() {
   const card = createProductCard(newProduct);
   flexProdContainer.appendChild(card);
 }; 
-
-
 //filtra prod desde input asignado
 const searchInput = document.getElementById('busqueda-prod');
 function renderProducts(filteredProducts) {
@@ -243,6 +239,8 @@ checkboxes.forEach(checkbox => {
 
 // Mostrar todos al inicio
 renderProducts(products);
+
+
 
 
 
