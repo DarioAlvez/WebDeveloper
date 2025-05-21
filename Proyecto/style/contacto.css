@@ -157,3 +157,27 @@ footer a {
     flex-direction: column;
   }
 }
+#inputs-login
+{
+
+
+
+
+
+
+}
+
+#inputs-login button{
+
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3871c5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  flex: 1;
+}
+#inputs-login button:hover{
+  background-color: #265a9c;
+}
