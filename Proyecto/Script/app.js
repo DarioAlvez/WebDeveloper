@@ -1,131 +1,133 @@
 
 //creacion de tarjeta de productos a mano
 const products = [
-    {
-        name: "Cartabella Daily",
-        description: "Cartabella Daily es un papel higiénico de 2 capas,suave y resistente.",
-        image: "img/prods/PH/cartabelladaily.png",
-        price: 15,
-        category: "ph"
-    },
-    {
-        name: "Felpita 50 metros",
-        description: "Felpita 50 metros, ideal para uso diario y de alta calidad.",
-        image: "img/prods/PH/felpita50mts.png",
-        price: 25,
-        category: "ph"
-    },
-    {
-        name: "Felpita Blanquisimo 80 metros",
-        description: "Felpita Blanquisimo 80 metros,\npapel higiénico de alta calidad y suavidad.",
-        image: "img/prods/PH/felpita80mtsblanquisimo.png",
-        price: 50,
-        category: "ph"
-    },
-    {
-        name: "Felpita Blanquisimo",
-        description: "Felpita Blanquisimo!\nUn papel higiénico suave y resistente, ideal para el uso diario.",
-        image: "img/prods/PH/felpitablanquisimo.png",
-        price: 10,
-        category: "ph"          
-    },
-    {
-        name: "Felpita Doble Hoja 30 metros",
-        description: "-------",
-        image: "img/prods/PH/felpitadoblehoja30mts.png",
-        price: 10,
-        category: "ph"
+    //Productos armados manualmente  
+    //{
+    //     name: "Cartabella Daily",
+    //     description: "Cartabella Daily es un papel higiénico de 2 capas,suave y resistente.",
+    //     image: "img/prods/PH/cartabelladaily.png",
+    //     price: 15,
+    //     category: "ph"
+    // },
+    // {
+    //     name: "Felpita 50 metros",
+    //     description: "Felpita 50 metros, ideal para uso diario y de alta calidad.",
+    //     image: "img/prods/PH/felpita50mts.png",
+    //     price: 25,
+    //     category: "ph"
+    // },
+    // {
+    //     name: "Felpita Blanquisimo 80 metros",
+    //     description: "Felpita Blanquisimo 80 metros,\npapel higiénico de alta calidad y suavidad.",
+    //     image: "img/prods/PH/felpita80mtsblanquisimo.png",
+    //     price: 50,
+    //     category: "ph"
+    // },
+    // {
+    //     name: "Felpita Blanquisimo",
+    //     description: "Felpita Blanquisimo!\nUn papel higiénico suave y resistente, ideal para el uso diario.",
+    //     image: "img/prods/PH/felpitablanquisimo.png",
+    //     price: 10,
+    //     category: "ph"          
+    // },
+    // {
+    //     name: "Felpita Doble Hoja 30 metros",
+    //     description: "-------",
+    //     image: "img/prods/PH/felpitadoblehoja30mts.png",
+    //     price: 10,
+    //     category: "ph"
 
-    },
-    {
-        name: "Felpita Doble Hoja 30 metros Pack 6 unidades",
-        description: "-------",
-        image: "img/prods/PH/felpitadoblehoja30mtsx6.png",
-        price: 10,
-        category: "ph"
+    // },
+    // {
+    //     name: "Felpita Doble Hoja 30 metros Pack 6 unidades",
+    //     description: "-------",
+    //     image: "img/prods/PH/felpitadoblehoja30mtsx6.png",
+    //     price: 10,
+    //     category: "ph"
 
-    },
-    {
-        name: "Felpita Doble Hoja con Soft textura",
-        description: "-------",
-        image: "img/prods/PH/felpitadobletextura.png",
-        price: 10,
-        category: "ph"
+    // },
+    // {
+    //     name: "Felpita Doble Hoja con Soft textura",
+    //     description: "-------",
+    //     image: "img/prods/PH/felpitadobletextura.png",
+    //     price: 10,
+    //     category: "ph"
 
-    },
-    {
-        name: "Felpita Pack Familiar",
-        description: "-------",
-        image: "img/prods/PH/felpitafamiliar.png",
-        price: 10,
-        category: "rc"
+    // },
+    // {
+    //     name: "Felpita Pack Familiar",
+    //     description: "-------",
+    //     image: "img/prods/PH/felpitafamiliar.png",
+    //     price: 10,
+    //     category: "rc"
 
-    },
-    {
-        name: "Felpita Institucional 18 Grande",
-        description: "-------",
-        image: "img/prods/PH/felpitaindustrial8.png",
-        price: 10,
-        category: "inst"
+    // },
+    // {
+    //     name: "Felpita Institucional 18 Grande",
+    //     description: "-------",
+    //     image: "img/prods/PH/felpitaindustrial8.png",
+    //     price: 10,
+    //     category: "inst"
 
-    },
-    {
-        name: "Felpita Infinity",
-        description: "-------",
-        image: "img/prods/PH/felpitainfinity.png",
-        price: 10,
-        category: "rc"      
+    // },
+    // {
+    //     name: "Felpita Infinity",
+    //     description: "-------",
+    //     image: "img/prods/PH/felpitainfinity.png",
+    //     price: 10,
+    //     category: "rc"      
 
-    },
-    {
-        name: "Felpita Kids Decorado",
-        description: "-------",
-        image: "img/prods/PH/felpitakids.png",
-        price: 10,
-        category: "rc"
+    // },
+    // {
+    //     name: "Felpita Kids Decorado",
+    //     description: "-------",
+    //     image: "img/prods/PH/felpitakids.png",
+    //     price: 10,
+    //     category: "rc"
 
-    },
-    {
-        name: "Felpita Super Pack 24 unidades Familiar",
-        description: "-------",
-        image: "img/prods/PH/felpitasuperpack24.png",
-        price: 10,
-        category: "rc"
+    // },
+    // {
+    //     name: "Felpita Super Pack 24 unidades Familiar",
+    //     description: "-------",
+    //     image: "img/prods/PH/felpitasuperpack24.png",
+    //     price: 10,
+    //     category: "rc"
 
-    },
-    {
-        name: "Felpita Pack 12 unidades Familiar",
-        description: "-------",
-        image: "img/prods/PH/felpitax12 familiar.png",
-        price: 10,
-        category: "rc"
+    // },
+    // {
+    //     name: "Felpita Pack 12 unidades Familiar",
+    //     description: "-------",
+    //     image: "img/prods/PH/felpitax12 familiar.png",
+    //     price: 10,
+    //     category: "rc"
 
-    },
-    {
-        name: "Felpita Pack 6 unidades Familiar",
-        description: "-------",
-        image: "img/prods/PH/felpitax6familiar.png",
-        price: 10,
-        category: "rc"
+    // },
+    // {
+    //     name: "Felpita Pack 6 unidades Familiar",
+    //     description: "-------",
+    //     image: "img/prods/PH/felpitax6familiar.png",
+    //     price: 10,
+    //     category: "rc"
 
-    },
-    {
-        name: "Floripel 4 unidades",
-        description: "-------",
-        image: "img/prods/PH/floripel.png",
-        price: 10,
-        category: "rc"
+    // },
+    // {
+    //     name: "Floripel 4 unidades",
+    //     description: "-------",
+    //     image: "img/prods/PH/floripel.png",
+    //     price: 10,
+    //     category: "rc"
 
-    },
-    {
-        name: "Softpaper 4 unidades",
-        description: "-------",
-        image: "img/prods/PH/softpaper.png",
-        price: 10,
-        category: "serv"
+    // },
+    // {
+    //     name: "Softpaper 4 unidades",
+    //     description: "-------",
+    //     image: "img/prods/PH/softpaper.png",
+    //     price: 10,
+    //     category: "serv"
 
-    }
+    // }
     
+   
 ];
 //funcion de creacion de tarjeta de productos
 function createProductCard(product) {
@@ -240,8 +242,40 @@ checkboxes.forEach(checkbox => {
 // Mostrar todos al inicio
 renderProducts(products);
 
+//se copian los parametros de las const desde altaprods.js
 
+const API_KEY = "patbN4kC1WyOaJoSL.b274316324f2af1cfce8b7683e64dcac07fe432e05d3ceee9a9808c78bdc7804";
+const BASE_ID = "appGL2RO8ExE8iOIz";
+const TABLE_NAME = "productos";
+const API_URL = `https://api.airtable.com/v0/appGL2RO8ExE8iOIz/productos`;
 
+// Traer datos desde Airtable
+async function fetchProductsFromAirtable() {
+  try {
+    const response = await fetch(API_URL, {
+      headers: {
+        Authorization: `Bearer ${API_KEY}`
+      }
+    });
+
+    const data = await response.json();
+
+    const products = data.records.map(record => ({
+      name: record.fields.Name,
+      description: record.fields.description,
+      image: record.fields.image,
+      price: record.fields.price,
+      category: record.fields.category
+    }));
+
+    renderProducts(products); 
+  } catch (error) {
+    console.error("Error al cargar productos: ", error);
+  }
+}
+
+// Llamar a esta función en lugar de cargar productos locales
+fetchProductsFromAirtable();
 
 
 

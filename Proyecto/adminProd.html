@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<HTML lang="es">  
+  <head>      
+    <link rel="stylesheet" href="./style/altaprod.css">
+    <link rel="stylesheet" href="./style/adminProd.css"> 
+    <script src="./Script/adminProd.js" defer></script> 
+  </head>
+  <body>    
+    <div class="top-intro">
+      <div class="imagenes-logo">
+        <img class="logo-psag" src="./img/logo_2017.png" alt="Imagen no disponible">
+        <div class="textos-header">
+          <h1 class="txt-head">Portal de Productos PSAG</h1>            
+        </div>
+        <img class="logo-psag" src="./img/logo_felpita.png" alt="Imagen no disponible">
+      </div>      
+        <nav class="menu-foot">
+          <ul>
+            <li class="li-menu">
+              <a href="index.html">Catalogo</a>
+            </li>
+            <li class="li-menu">
+              <a href="verpedidos.html">Consulta Pedidos</a>
+            </li>
+            <li class="li-menu">
+              <a href="nostros.html">Nosotros</a>
+            </li>
+            <li class="li-menu">
+              <a href="contacto.html">Contacto</a>
+            </li>        
+          </ul>
+        </nav>       
+      </div>
+      <main>
+        <h3 id="edit-del-prod">Editar o Eliminar productos del Catalogo</h3>
+        <label for="select-productos">Seleccioná un producto:</label>
+        <select id="select-productos">
+        <option value="">Cargando productos...</option>
+        </select>
+        <form id="form-editar-producto" style="display:none;">
+          <h4>Editar Producto</h4>
+          <input type="hidden" id="producto-id">
+          
+          <label for="name">Nombre:</label>
+          <input type="text" id="name"><br>
+
+          <label for="description">Descripción:</label>
+          <textarea id="description"></textarea><br>
+
+          <label for="image">Ruta Imagen:</label>
+          <input type="text" id="image"><br>
+
+          <label for="price">Precio:</label>
+          <input type="number" id="price" step="0.01"><br>
+
+          <label for="category">Categoria:</label>
+          <input type="text" id="category"><br>
+
+          <button type="submit">Actualizar Producto</button>
+
+          <button type="button" id="btn-eliminar" style="margin-top: 10px; background-color: red; color: white;">Eliminar Producto</button>
+        </form>
+      </main>
+    <footer>
+      <p class="derechosreservados" style="text-align: center;">Todos los derechos reservados por 
+      <a href="https://www.psag.com.ar">Papelera San Andrés de Giles</a> ©.</p>
+    </footer>
+    </body>    
+</HTML>
