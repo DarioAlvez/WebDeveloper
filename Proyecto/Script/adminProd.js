@@ -5,7 +5,6 @@ const API_KEY = "patbN4kC1WyOaJoSL.b274316324f2af1cfce8b7683e64dcac07fe432e05d3c
 const BASE_ID = "appGL2RO8ExE8iOIz";
 const TABLE_NAME = "productos";
 const API_URL = `https://api.airtable.com/v0/appGL2RO8ExE8iOIz/productos`;
-
 // edicion de productos ya cargados en airtable desde adminProd.html
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -45,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await res.json();
       const fields = data.fields;
 
-      // Mostrar en el formulario
+// Mostrar en el formulario
       document.getElementById("producto-id").value = productoId;
       document.getElementById("name").value = fields.Name || "";
       document.getElementById("description").value = fields.description || "";
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Submit del formulario para actualizar
+// Submit del formulario para actualizar
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const id = document.getElementById("producto-id").value;
@@ -97,3 +96,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
   llenarSelectDesdeAirtable();
 });
+
+//eliminar producto listado en airtable
+
+const btnEliminar = document.getElementById("btn-eliminar");
+btnEliminar.addEventListener("click", async () => {
+    const id = document.getElementById("producto-id").value;
+    if (!id) {
+      alert("Seleccioná un producto para eliminar.");
+      return;
+    }
+
+    const confirmDelete = confirm("¿Estás seguro de eliminar este producto?");
+    if (!confirmDelete) return;
+
+    try {
+      const res = await fetch(`${API_URL}/${id}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${API_KEY}`
+        }
+      });
+
+      if (res.ok) {
+        alert("Producto eliminado correctamente");
+        llenarSelectDesdeAirtable();
+        form.style.display = "none";
+        select.value = ""; // resetear select
+      } else {
+        alert("Error al eliminar el producto");
+      }
+    } catch (error) {
+      console.error("Error al eliminar producto:", error);
+    }
+      llenarSelectDesdeAirtable();
+  });
+
+
+

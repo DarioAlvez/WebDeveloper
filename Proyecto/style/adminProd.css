@@ -1,3 +1,4 @@
+/* Reset básico y fuentes */
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +8,14 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+/* HEADER */
 .top-intro {
-  background-color: #002147;
+  background: linear-gradient(to right, #002147, #dcdcdc);
   color: white;
   padding: 10px 20px;
   text-align: center;
@@ -32,6 +38,11 @@ body {
   text-align: center;
 }
 
+.txt-head {
+  font-size: 1.6rem;
+}
+
+/* MENÚ */
 .menu-foot ul {
   display: flex;
   flex-wrap: wrap;
@@ -39,7 +50,7 @@ body {
   gap: 10px;
   list-style: none;
   padding: 10px 0;
-  
+  background: linear-gradient(to right, #002147, #dcdcdc);
 }
 
 .li-menu {
@@ -63,51 +74,60 @@ body {
   color: #002147;
 }
 
-
-#form-contacto {
+main#main-editar-producto {
   padding: 5vh 5vw;
   background-color: #ffffff;
   max-width: 600px;
-  margin: auto;
+  width: 90%;
+  margin: 5vh auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin-top: 5vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-#form-contacto h1 {
+main#main-editar-producto h1 {
   text-align: center;
   margin-bottom: 2rem;
   color: #002147;
 }
 
-#form-contacto form {
+main#main-editar-producto label {
+  font-size: 1rem;
+  color: #002147;
+  margin-top: 10px;
+  margin-bottom: 10px;  
+}
+
+main#main-editar-producto select,
+main#main-editar-producto input,
+main#main-editar-producto textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #3871c5;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+main#main-editar-producto textarea {
+  height: 100px;
+  resize: none;
+}
+
+#form-editar-producto form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-#form-contacto label {
-  font-size: 1rem;
-  color: #002147;
-}
-
-#form-contacto input,
-#form-contacto textarea {
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #3871c5;
-  width: 100%;
-}
-
-#form-contacto textarea {
-  height: 100px;
-  resize: none;
-}
 
 .contenedor-botones {
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .botones-pedidos {
@@ -125,11 +145,30 @@ body {
   background-color: #265a9c;
 }
 
+#btn-eliminar {
+  background-color: red !important;
+}
 
 
+footer {
+  padding: 20px 30px;
+  text-align: center;
+  background: linear-gradient(to right, #002147, #dcdcdc);
+  width: 100%;
+  margin-top: auto;
+}
+
+footer a {
+  text-decoration: none;
+  color: #f0c040;
+  font-weight: bold;
+}
 
 
 @media screen and (max-width: 768px) {
+  body {
+    font-size: 26px;
+  }
   .imagenes-logo {
     flex-direction: column;
     align-items: center;
@@ -142,5 +181,14 @@ body {
 
   .contenedor-botones {
     flex-direction: column;
+  }
+  
+  .botones-pedidos {
+    width: 100%;
+  }
+   #form-editar-producto {
+    padding: 3vh 4vw;
+    max-width: 90vw;
+    max-height: 80vh;
   }
 }

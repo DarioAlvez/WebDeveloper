@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <HTML lang="es">  
   <head>      
-    <link rel="stylesheet" href="./style/altaprod.css">
     <link rel="stylesheet" href="./style/adminProd.css"> 
     <script src="./Script/adminProd.js" defer></script> 
   </head>
@@ -17,10 +16,10 @@
         <nav class="menu-foot">
           <ul>
             <li class="li-menu">
-              <a href="index.html">Catalogo</a>
+              <a href="altaproducto.html">Alta de Producto</a>
             </li>
             <li class="li-menu">
-              <a href="altaproducto.html">Alta de Producto</a>
+              <a href="index.html">Catalogo</a>
             </li>
             <li class="li-menu">
               <a href="nostros.html">Nosotros</a>
@@ -31,34 +30,35 @@
           </ul>
         </nav>       
       </div>
-      <main>
-        <h3 id="edit-del-prod">Editar o Eliminar productos del Catalogo</h3>
+      <main id="main-editar-producto">
+        <h1>Editar o Eliminar productos del Catálogo</h1>
+
         <label for="select-productos">Seleccioná un producto:</label>
         <select id="select-productos">
-        <option value="">Cargando productos...</option>
+          <option value="">Cargando productos...</option>
         </select>
-        <form id="form-editar-producto" style="display:none;">
-          <h4>Editar Producto</h4>
-          <input type="hidden" id="producto-id">
-          
+        <form id="form-editar-producto" style="display: none;">
+          <input type="hidden" id="producto-id" />
+
           <label for="name">Nombre:</label>
-          <input type="text" id="name"><br>
+          <input type="text" id="name" />
 
           <label for="description">Descripción:</label>
-          <textarea id="description"></textarea><br>
+          <textarea id="description"></textarea>
 
           <label for="image">Ruta Imagen:</label>
-          <input type="text" id="image"><br>
+          <input type="text" id="image" />
 
           <label for="price">Precio:</label>
-          <input type="number" id="price" step="0.01"><br>
+          <input type="number" id="price" />
 
-          <label for="category">Categoria:</label>
-          <input type="text" id="category"><br>
+          <label for="category">Categoría:</label>
+          <input type="text" id="category" />
 
-          <button type="submit">Actualizar Producto</button>
-
-          <button type="button" id="btn-eliminar" style="margin-top: 10px; background-color: red; color: white;">Eliminar Producto</button>
+          <div class="contenedor-botones">
+            <button type="submit" class="botones-pedidos">Actualizar Producto</button>
+            <button type="button" id="btn-eliminar" class="botones-pedidos" style="background-color: red;">Eliminar Producto</button>
+          </div>
         </form>
       </main>
     <footer>
