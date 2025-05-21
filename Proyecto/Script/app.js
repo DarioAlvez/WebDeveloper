@@ -1,4 +1,3 @@
-
 //creacion de tarjeta de productos a mano
 const products = [
     {
