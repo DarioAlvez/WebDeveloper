@@ -136,19 +136,21 @@ footer a {
 }
 
 .botones-pedidos {
-  padding: 10px 20px;
-  background-color: #002147;
+  display: block;  
+  background-color: #3871c5;
   color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
+  padding: 5px 30px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-size: large;
+  width: 25%;
+  text-align: center;
 }
 
 .botones-pedidos:hover {
-  background-color: #f0c040;
-  color: #002147;
+  background-color: #003e85;
+  color: white;
+  transition: 0.3s;
 }
 
 @media screen and (max-width: 768px) {
