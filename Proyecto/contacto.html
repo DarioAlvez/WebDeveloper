@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="./style/cargaPedidos.css">
+    
     <link rel="stylesheet" href="./style/contacto.css">    
 </head>
 <body>
+  <div class="prueba-container">
     <div class="top-intro">
         <div class="imagenes-logo">
           <img class="logo-psag" src="./img/logo_2017.png" alt="Imagen no disponible">
@@ -30,29 +31,36 @@
             </ul>
           </nav>
         </div>
-        <div>
-          <form>
-            <div id="form-contacto">
-            <h1 >Contactenos</h1>
-            <br>
+        <div id="form-contacto">
+          <h2 class="txt-form">Formulario de Contacto</h2>
+          <p class="txt-form">
+            Si desea contactarse con nosotros, complete el siguiente formulario y nos pondremos en contacto a la brevedad.
+          </p>
+          <form>                        
             <label for="nombre">Nombre:</label><br>
             <input type="text" id="nombre" name="nombre"><br><br>
+
             <label for="apellido">Apellido:</label><br>
             <input type="text" id="apellido" name="apellido"><br><br>
+
             <label for="email">Mail:</label><br>
             <input type="email" id="email" name="email"><br><br>
+
             <label for="telefono">Telefono:</label><br>
             <input type="text" id="telefono" name="telefono"><br><br>
+
             <label for="asunto">Asunto:</label><br>            
             <input type="text" id="asunto" name="asunto"><br><br>   
+
             <label for="mensaje">Mensaje:</label><br>
             <textarea id="mensaje" name="mensaje"></textarea><br><br>
 
             <div class="contenedor-botones">
-                <button class="botones-pedidos" type="submit">Enviar</button>
-                <button class="botones-pedidos" type="reset">Cancelar</button>
+              <button class="botones-pedidos" type="submit">Enviar</button>
+              <button class="botones-pedidos" type="reset">Cancelar</button>
             </div>
-        </form>
+          </form>
+        </div>
     </div>
     <footer>
         <p class="derechosreservados" style="text-align: center;">Todos los derechos reservados por 

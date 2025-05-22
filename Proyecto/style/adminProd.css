@@ -1,4 +1,3 @@
-/* Reset básico y fuentes */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +12,7 @@ body {
   flex-direction: column;
 }
 
-/* HEADER */
+
 .top-intro {
   background: linear-gradient(to right, #002147, #dcdcdc);
   color: white;
@@ -42,7 +41,7 @@ body {
   font-size: 1.6rem;
 }
 
-/* MENÚ */
+
 .menu-foot ul {
   display: flex;
   flex-wrap: wrap;
