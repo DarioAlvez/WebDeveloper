@@ -9,7 +9,6 @@ document.addEventListener("click", function (e) {
         const imgSrc = card.querySelector("img").src;
 
         const productoExistente = carrito.find(item => item.nombre === nombre);
-
         if (productoExistente) {
             productoExistente.cantidad += 1;
         } else {
@@ -19,6 +18,8 @@ document.addEventListener("click", function (e) {
         guardarCarrito();
         renderCarrito();
     }
+
+    //agregar quitar cant. prod en el carrito para el calculo del subtotal
 
     if (e.target.classList.contains("btn-sumar")) {
         const nombre = e.target.dataset.nombre;
@@ -39,6 +40,13 @@ document.addEventListener("click", function (e) {
         guardarCarrito();
         renderCarrito();
     }
+
+    if (e.target.classList.contains("btn-finalizar")) {
+        carrito = [];
+        guardarCarrito();
+        renderCarrito();
+        mostrarMensajeYRedirigir();
+    }
 });
 
 function guardarCarrito() {
@@ -46,7 +54,7 @@ function guardarCarrito() {
 }
 
 function renderCarrito() {
-    const contenedor = document.querySelector(".carrito-container");
+    const contenedor = document.querySelector("#productos-lista");
     if (!contenedor) return;
 
     contenedor.innerHTML = "";
@@ -57,28 +65,43 @@ function renderCarrito() {
         total += subtotal;
 
         const item = document.createElement("div");
-        item.classList.add("item-carrito");
+        item.classList.add("card-carrito");
 
         item.innerHTML = `
-            <img src="${producto.img}" class="img-carrito" width="50">
-            <span>${producto.nombre}</span>
-            <span>$${producto.precio.toFixed(2)}</span>
-            <span>
-                <button class="btn-restar" data-nombre="${producto.nombre}">-</button>
-                ${producto.cantidad}
-                <button class="btn-sumar" data-nombre="${producto.nombre}">+</button>
-            </span>
-            <span>Subtotal: $${subtotal.toFixed(2)}</span>
+            <img src="${producto.img}" class="img-carrito" alt="${producto.nombre}">
+            <div class="info-carrito">
+                <h2 class="nombre-carrito">${producto.nombre}</h2>
+                <p class="precio-carrito">Precio: $${producto.precio.toFixed(2)}</p>
+                <div class="cantidad-carrito">
+                    <button class="btn-restar" data-nombre="${producto.nombre}">-</button>
+                    <span>${producto.cantidad}</span>
+                    <button class="btn-sumar" data-nombre="${producto.nombre}">+</button>
+                </div>
+                <p class="subtotal-carrito">Subtotal: $${subtotal.toFixed(2)}</p>
+            </div>
         `;
 
         contenedor.appendChild(item);
     });
 
-    const totalDiv = document.createElement("div");
-    totalDiv.classList.add("total-carrito");
-    totalDiv.innerHTML = `<strong>Total: $${total.toFixed(2)}</strong>`;
-    contenedor.appendChild(totalDiv);
+    document.getElementById("total-general").textContent = total.toFixed(2);
 }
 
-// Render inicial por si hay algo en el localStorage
+function mostrarMensajeYRedirigir() {
+    const main = document.querySelector("main");
+    if (main) {
+        main.innerHTML = `
+            <div style="text-align:center; padding: 40px;">
+                <h2 style="color: green;">Compra realizada con éxito</h2>
+                <p>Redirigiendo al catálogo...</p>
+            </div>
+        `;
+    }
+
+    // mandar al index despues de la compra
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 2500); 
+}
+
 renderCarrito();
