@@ -185,5 +185,19 @@ function renderCarrito() {
 // Render inicial por si hay algo en el localStorage
 renderCarrito();
 
+document.querySelectorAll('.btn-agregar-carrito').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.classList.contains('clicked')) return; // no stackear clicks
+    btn.classList.add('clicked');
+    const originalText = btn.textContent;
+    btn.textContent = '¡Agregado!';
+
+    setTimeout(() => {
+      btn.classList.remove('clicked');
+      btn.textContent = originalText;
+    }, 1500);
+  });
+});
+
 
 

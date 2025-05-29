@@ -7,9 +7,8 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
-  padding-top: 120px; /* ubicacion header */
+  padding-top: 120px; /* ubicación header */
 }
-
 
 .top-intro {
   position: fixed;
@@ -20,7 +19,6 @@ body {
   z-index: 1000;
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  
 }
 
 .top-intro h1 {
@@ -81,10 +79,8 @@ main {
   grid-row: auto;
   gap: 20px;
   padding: 20px;
-  margin-left: 220px; /*menu lateral*/
-  
+  margin-left: 220px; /* menú lateral */
 }
-
 
 .menu-lateral {
   position: fixed;
@@ -114,6 +110,7 @@ main {
   flex-direction: column;
   gap: 8px;
 }
+
 .boton-carrito {
   margin-top: 20px;
   padding: 10px 20px;
@@ -127,14 +124,13 @@ main {
 }
 
 footer {
-    position: fixed;
-    z-index: 1; 
-    bottom: 0;
-    padding: 15px 25px;
-    text-align: center;
-    background: linear-gradient(to right, #002147, #dcdcdc);
-    width: 100%;
-    
+  position: fixed;
+  z-index: 1; 
+  bottom: 0;
+  padding: 15px 25px;
+  text-align: center;
+  background: linear-gradient(to right, #002147, #dcdcdc);
+  width: 100%;
 }
 
 footer a {
@@ -142,6 +138,7 @@ footer a {
   color: #f0c040;
   font-weight: bold;
 }
+
 .prod-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
@@ -149,6 +146,7 @@ footer a {
   padding: 20px;
   margin-top: 20px;
 }
+
 .card-product {
   background-color: white;
   padding: 15px;
@@ -159,7 +157,6 @@ footer a {
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s;
-  
 }
 
 .card-product img {
@@ -183,8 +180,6 @@ footer a {
   color: #444;
   margin: 10px 0;
   flex-grow: 1;
-}
-.descripcion-prod {
   transition: all 0.3s ease;
 }
 
@@ -201,6 +196,7 @@ footer a {
   color: #002147;
 }
 
+/* Botón agregar carrito - estado normal */
 .btn-agregar-carrito {
   background-color: #002147;
   color: white;
@@ -208,17 +204,37 @@ footer a {
   border-radius: 6px;
   padding: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
 }
 
+/* Hover normal */
 .btn-agregar-carrito:hover {
-      background-color: #003e85;
-      color: white;
-      transition: 0.3s;
+  background-color: #003e85;
+  color: white;
+  transition: 0.3s;
 }
+
+/* Estado clicked: botón resaltado con sombra y aumento */
+.btn-agregar-carrito.clicked {
+  background-color: #28a745 !important;  /* verde */
+  color: white !important;
+  box-shadow: 0 0 15px 4px rgba(40, 167, 69, 0.9);
+  transform: scale(1.1);
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+
+@media (min-width: 769px) {
+  .btn-agregar-carrito.clicked {
+    pointer-events: none;
+  }
+}
+
+/* Responsive */
 @media screen and (max-width: 768px) {
-    main {
+  main {
     flex-direction: column;
+    margin-left: 0; /* para no tener margen lateral fijo en móvil */
   }
 
   .menu-lateral {
@@ -241,13 +257,17 @@ footer a {
     flex-direction: column;
     align-items: center;
   }
-  
 }
+
 @media screen and (min-width: 1200px) {
   .prod-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+  .btn-agregar-carrito.clicked {
+    pointer-events: none;
+  }
 }
+
 #btn-flotante {
   position: fixed;
   bottom: 20px;
@@ -268,10 +288,5 @@ footer a {
   background-color: #004080;
   transform: scale(1.1);
 }
-
-
-
-
-
 
 

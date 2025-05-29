@@ -8,6 +8,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
   padding-top: 120px;
+  font-size: 16px;
 }
 
 .top-intro {
@@ -74,9 +75,10 @@ body {
   color: #002147;
 }
 
+/* Espacio extra abajo para que no tape el footer fijo */
 .carrito-container {
   padding: 20px 30px;
-  padding-bottom: 100px; /* <-- espacio para que no tape el footer */
+  padding-bottom: 120px; /* ajusta si el footer cambia de altura */
 }
 
 .prod-container {
@@ -167,19 +169,51 @@ body {
   background-color: #e2ad00;
 }
 
+/* Footer fijo abajo */
 footer {
-  /* fixed removido para mantener flujo normal */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   padding: 15px 25px;
   text-align: center;
   background: linear-gradient(to right, #002147, #dcdcdc);
-  width: 100%;
-  margin-top: 40px;
+  z-index: 1000;
 }
 
 footer a {
   text-decoration: none;
   color: #f0c040;
   font-weight: bold;
+}
+
+/* Aumentar fuente en resoluciones menores a 1200px */
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+
+  .top-intro h1 {
+    font-size: 1.8rem;
+  }
+
+  .nombre-carrito {
+    font-size: 1.3rem;
+  }
+
+  .precio-carrito,
+  .subtotal-carrito {
+    font-size: 1.1rem;
+  }
+
+  .carrito-total {
+    font-size: 1.5rem;
+  }
+
+  .btn-finalizar {
+    font-size: 1.1rem;
+    padding: 14px 22px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -205,5 +239,43 @@ footer a {
   .btn-finalizar {
     width: 100%;
     text-align: center;
+  }
+}
+
+/* Estilos específicos para pantallas muy pequeñas como iPhone SE */
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 19px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .top-intro h1 {
+    font-size: 1.6rem;
+  }
+
+  .menu-foot li {
+    padding: 10px 20px;
+  }
+
+  .btn-finalizar {
+    font-size: 1.2rem;
+    padding: 16px 20px;
+  }
+
+  .img-carrito {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-carrito {
+    padding: 16px;
+  }
+
+  .nombre-carrito,
+  .precio-carrito,
+  .subtotal-carrito,
+  .carrito-total {
+    font-size: 1.2rem;
   }
 }
