@@ -9,15 +9,15 @@ const checkboxes = document.querySelectorAll('.chkbox-familia input[type="checkb
 
 function createProductCard(product) {
     const card = document.createElement('article');
-    card.classList.add('card-product'); 
+    card.classList.add('card-product');
+
+    card.addEventListener('click', () => {
+        localStorage.setItem('productoDetalle', JSON.stringify(product));
+        window.location.href = 'detalle.html';
+    });
 
     const img = document.createElement('img');
-    
-    if (product.image && Array.isArray(product.image)) {
-        img.src = product.image[0].url || '';
-    } else {
-        img.src = product.image || '';
-    }
+    img.src = (product.image && Array.isArray(product.image)) ? product.image[0].url : product.image || '';
     img.alt = product.name;
     img.classList.add('img-ph');
 
@@ -29,6 +29,10 @@ function createProductCard(product) {
     description.classList.add('descripcion-prod');
     description.textContent = product.description;
 
+    const detalledescrip = document.createElement('p');
+    description.classList.add('descripcion-prod');
+    description.textContent = product.description;
+
     const price = document.createElement('p');
     price.classList.add('precio-prod');
     price.textContent = `Precio: $${product.price}`;
@@ -36,6 +40,10 @@ function createProductCard(product) {
     const button = document.createElement('button');
     button.classList.add('btn-agregar-carrito');
     button.textContent = 'Agregar';
+    button.addEventListener('click', e => {
+        e.stopPropagation(); 
+        agregarProductoAlCarrito(product);
+    });
 
     card.appendChild(img);
     card.appendChild(title);
@@ -45,6 +53,7 @@ function createProductCard(product) {
 
     return card;
 }
+
 
 function renderProducts(filteredProducts) {
     flexProdContainer.innerHTML = '';
@@ -84,7 +93,8 @@ async function fetchProductsFromAirtable() {
         products = data.records.map(record => ({
             name: record.fields.Name || '',
             description: record.fields.description || '',
-            image: record.fields.image || '', // probablemente es un array
+            detalle_descrip: record.fields.Detalle_produc  || '',
+            image: record.fields.image || '',             
             price: record.fields.price || 0,
             category: record.fields.category || ''
         }));
@@ -199,5 +209,19 @@ document.querySelectorAll('.btn-agregar-carrito').forEach(btn => {
   });
 });
 
-
+function agregarProductoAlCarrito(product) {
+    const productoExistente = carrito.find(item => item.nombre === product.name);
+    if (productoExistente) {
+        productoExistente.cantidad += 1;
+    } else {
+        carrito.push({
+            nombre: product.name,
+            precio: product.price,
+            cantidad: 1,
+            img: (product.image && Array.isArray(product.image)) ? product.image[0].url : product.image || ''
+        });
+    }
+    guardarCarrito();
+    renderCarrito();
+}
 

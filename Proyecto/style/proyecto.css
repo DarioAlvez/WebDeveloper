@@ -230,11 +230,11 @@ footer a {
   }
 }
 
-/* Responsive */
+
 @media screen and (max-width: 768px) {
   main {
     flex-direction: column;
-    margin-left: 0; /* para no tener margen lateral fijo en móvil */
+    margin-left: 0; 
   }
 
   .menu-lateral {
@@ -290,3 +290,17 @@ footer a {
 }
 
 
+#detalle-producto .descripcion-prod:hover {
+  background-color: inherit !important;
+  transform: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+.detalle-extra {
+  font-family: 'Georgia', serif;
+  font-size: 0.95rem;
+  color: #444;
+  margin: 10px 0 20px;
+  line-height: 1.4;
+}
