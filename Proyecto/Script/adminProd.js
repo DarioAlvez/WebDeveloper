@@ -5,11 +5,19 @@ const API_KEY = "patbN4kC1WyOaJoSL.b274316324f2af1cfce8b7683e64dcac07fe432e05d3c
 const BASE_ID = "appGL2RO8ExE8iOIz";
 const TABLE_NAME = "productos";
 const API_URL = `https://api.airtable.com/v0/appGL2RO8ExE8iOIz/productos`;
+
 // edicion de productos ya cargados en airtable desde adminProd.html
 
 document.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("select-productos");
   const form = document.getElementById("form-editar-producto");
+
+    //Limpiar formulario y resetearlo post operaciones
+    function limpiarFormulario() {
+    form.reset(); 
+    form.style.display = "none"; 
+    select.value = ""; 
+    }
 
   async function llenarSelectDesdeAirtable() {
     try {
@@ -86,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (res.ok) {
         alert("Producto actualizado correctamente");
         llenarSelectDesdeAirtable(); // Recargar por si cambia el nombre
+        limpiarFormulario();
       } else {
         alert("Error al actualizar el producto");
       }
@@ -121,6 +130,7 @@ btnEliminar.addEventListener("click", async () => {
       if (res.ok) {
         alert("Producto eliminado correctamente");
         llenarSelectDesdeAirtable();
+        limpiarFormulario();
         form.style.display = "none";
         select.value = ""; // resetear select
       } else {
@@ -131,6 +141,5 @@ btnEliminar.addEventListener("click", async () => {
     }
       llenarSelectDesdeAirtable();
   });
-
 
 

@@ -47,6 +47,7 @@ body: JSON.stringify(data)
 if (response.ok) {
 alert("Producto agregado correctamente.");
 e.target.reset();
+formulario.reset();
 } else {
 const error = await response.json();
 alert("Error al agregar producto: " + JSON.stringify(error));
