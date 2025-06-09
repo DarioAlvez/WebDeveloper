@@ -34,6 +34,6 @@ document.getElementById("inputs-login").addEventListener("submit", async (e) => 
 
   } catch (error) {
     console.error("Error al verificar el usuario:", error);
-    alert("Error al conectar con el servidor.");
+    alert("Error de conexion.");
   }
 });
