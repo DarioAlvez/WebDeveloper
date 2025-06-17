@@ -142,7 +142,8 @@ footer a {
 
 .prod-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+  /*grid-template-columns: repeat(auto-fill, minmax(250px, 2fr)); */
+  grid-template-columns: 1fr;
   gap: 20px;
   padding: 20px;
   margin-top: 20px;
@@ -247,7 +248,21 @@ footer a {
 
   .prod-container {
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    
   }
+  .nombre-prod {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.descripcion-prod {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 10px 0;
+  flex-grow: 1;
+  transition: all 0.3s ease;
+}
 
   .imagenes-logo {
     flex-direction: column;
