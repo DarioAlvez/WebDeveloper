@@ -32,6 +32,7 @@
           </nav>
         </div>
         <div id="form-contacto">
+          <div id="mensaje-sistema" style="display:none; padding:10px; margin:10px 0; border-radius:6px; font-weight:bold;"></div>
           <h2 class="txt-form">Contactenos.</h2>
           <br>
           <br>
@@ -40,33 +41,28 @@
             y a la brevedad nos comunicaremos con usted.
           </p>
           <br>
-          <form>                        
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre">
+      <form>                        
+          <label for="nombre">Nombre:</label><br>
+          <input type="text" id="nombre" name="nombre">
+          <label for="apellido">Apellido:</label><br>
+          <input type="text" id="apellido" name="apellido">
+          <label for="mail">Mail:</label><br>
+          <input type="email" id="mail" name="email">
+          <label for="telefono">Telefono:</label><br>
+          <input type="text" id="telefono" name="telefono" autocomplete="on">
+          <label for="asunto">Asunto:</label><br>            
+          <input type="text" id="asunto" name="asunto">
+          <label for="mensaje">Mensaje:</label><br>
+          <textarea id="mensaje" name="mensaje"></textarea>
 
-            <label for="apellido">Apellido:</label><br>
-            <input type="text" id="apellido" name="apellido">
-
-            <label for="mail">Mail:</label><br>
-            <input type="email" id="mail" name="email">
-
-            <label for="telefono">Telefono:</label><br>
-            <input type="text" id="telefono" name="telefono" autocomplete="on">
-
-            <label for="asunto">Asunto:</label><br>            
-            <input type="text" id="asunto" name="asunto">
-
-            <label for="mensaje">Mensaje:</label><br>
-            <textarea id="mensaje" name="mensaje"></textarea>
-
-            <div class="contenedor-botones">
-              <button class="botones-pedidos" type="submit">Enviar</button>
-              <button class="botones-pedidos" type="reset">Cancelar</button>
-            </div>
-          </form>
+        <div class="contenedor-botones">
+          <button class="botones-pedidos" type="submit">Enviar</button>
+          <button class="botones-pedidos" type="reset">Cancelar</button>
         </div>
+      </form>
+    </div>
   </div>
-    <footer>
+  <footer>
     <p class="derechosreservados" style="text-align: center;">Todos los derechos reservados por 
       <a href="https://www.psag.com.ar">Papelera San Andrés de Giles</a> ©.</p>
   </footer>

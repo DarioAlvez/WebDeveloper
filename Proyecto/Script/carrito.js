@@ -91,8 +91,10 @@ function mostrarMensajeYRedirigir() {
     const main = document.querySelector("main");
     if (main) {
         main.innerHTML = `
-            <div style="text-align:center; padding: 40px;">
-                <h2 style="color: green;">Compra realizada con éxito</h2>
+            <div style="text-align:center; padding: 40px; width: 50%; margin: 0 auto;">
+                <h2 style="color: #155724; background-color: #d4edda; border: 1px solid #c3e6cb;">Compra realizada con éxito</h2>
+                <br>
+                <br>
                 <p>Redirigiendo al catálogo...</p>
             </div>
         `;

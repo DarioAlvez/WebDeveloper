@@ -3,6 +3,28 @@ const BASE_ID = "appGL2RO8ExE8iOIz";
 const TABLE_NAME = "contacto";
 const API_URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
 
+//mensaje de error para reemplazar los alertas 
+
+function mostrarMensaje(texto, tipo = "exito") {
+  const mensaje = document.getElementById("mensaje-sistema");
+  mensaje.textContent = texto;
+  mensaje.style.display = "block";
+
+  if (tipo === "ok") {
+    mensaje.style.backgroundColor = "#d4edda";
+    mensaje.style.color = "#155724";
+    mensaje.style.border = "1px solid #c3e6cb";
+  } else if (tipo === "error") {
+    mensaje.style.backgroundColor = "#f8d7da";
+    mensaje.style.color = "#721c24";
+    mensaje.style.border = "1px solid #f5c6cb";
+  }
+
+  setTimeout(() => {
+    mensaje.style.display = "none";
+  }, 3000);
+}
+
 document.querySelector("#form-contacto form").addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -11,10 +33,10 @@ document.querySelector("#form-contacto form").addEventListener("submit", async (
   const mail = document.getElementById("mail").value.trim();
   const telefono = document.getElementById("telefono").value.trim();
   const asunto = document.getElementById("asunto").value.trim();
-  const mensaje = document.getElementById("mensaje").value.trim();
+  const mensajeTexto = document.getElementById("mensaje").value.trim();
 
-  if (!nombre || !apellido || !mail || !telefono || !asunto || !mensaje) {
-    alert("Por favor complete todos los campos antes de enviar.");
+  if (!nombre || !apellido || !mail || !telefono || !asunto || !mensajeTexto) {
+    mostrarMensaje("Por favor complete todos los campos antes de enviar.", "error");
     return;
   }
 
@@ -25,7 +47,7 @@ document.querySelector("#form-contacto form").addEventListener("submit", async (
       mail: mail,
       telefono: telefono,
       asunto: asunto,
-      mensaje: mensaje,
+      mensaje: mensajeTexto,
     },
   };
 
@@ -42,15 +64,15 @@ document.querySelector("#form-contacto form").addEventListener("submit", async (
     });
 
     if (response.ok) {
-      alert("Formulario enviado con éxito.");
+      mostrarMensaje("Formulario enviado con éxito.", "ok");
       e.target.reset();
     } else {
       const errorData = await response.json();
       console.error("Error al enviar a Airtable:", errorData);
-      alert("Error al enviar el formulario. Verifique los datos e intente nuevamente.");
+      mostrarMensaje("Error al enviar el formulario. Verifique los datos e intente nuevamente.", "error");
     }
   } catch (error) {
     console.error("Error de red:", error);
-    alert("Error al enviar el formulario. Intente más tarde.");
+    mostrarMensaje("Error al enviar el formulario. Intente más tarde.", "error");
   }
 });

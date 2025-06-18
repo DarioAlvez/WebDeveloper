@@ -8,6 +8,29 @@ const API_URL = `https://api.airtable.com/v0/appGL2RO8ExE8iOIz/productos`;
 
 // edicion de productos ya cargados en airtable desde adminProd.html
 
+
+//mensaje de error para reemplazar los alertas 
+
+function mostrarMensaje(texto, tipo = "exito") {
+  const mensaje = document.getElementById("mensaje-sistema");
+  mensaje.textContent = texto;
+  mensaje.style.display = "block";
+
+  if (tipo === "exito") {
+    mensaje.style.backgroundColor = "#d4edda";
+    mensaje.style.color = "#155724";
+    mensaje.style.border = "1px solid #c3e6cb";
+  } else if (tipo === "error") {
+    mensaje.style.backgroundColor = "#f8d7da";
+    mensaje.style.color = "#721c24";
+    mensaje.style.border = "1px solid #f5c6cb";
+  }
+
+  setTimeout(() => {
+    mensaje.style.display = "none";
+  }, 3000);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("select-productos");
   const form = document.getElementById("form-editar-producto");
@@ -82,64 +105,70 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const res = await fetch(`${API_URL}/${id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${API_KEY}`
-        },
-        body: JSON.stringify(actualizado)
-      });
+    const res = await fetch(`${API_URL}/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${API_KEY}`
+      },
+      body: JSON.stringify(actualizado)
+    });
 
-      if (res.ok) {
-        alert("Producto actualizado correctamente");
-        llenarSelectDesdeAirtable(); // Recargar por si cambia el nombre
-        limpiarFormulario();
-      } else {
-        alert("Error al actualizar el producto");
-      }
-    } catch (error) {
-      console.error("Error al hacer update:", error);
+    if (res.ok) {
+      mostrarMensaje("Producto actualizado correctamente", "exito");
+      llenarSelectDesdeAirtable(); // Recargar por si cambia el nombre
+      limpiarFormulario();
+    } else {
+      mostrarMensaje("Error al actualizar el producto", "error");
     }
-  });
+    } catch (error) {
+    console.error("Error al hacer update:", error);
+    mostrarMensaje("Error inesperado al actualizar", "error");
+    }
+    });
 
-  llenarSelectDesdeAirtable();
-});
-
-//eliminar producto listado en airtable
+  //eliminar producto listado en airtable
 
 const btnEliminar = document.getElementById("btn-eliminar");
+
 btnEliminar.addEventListener("click", async () => {
-    const id = document.getElementById("producto-id").value;
-    if (!id) {
-      alert("Seleccioná un producto para eliminar.");
-      return;
-    }
+  const id = document.getElementById("producto-id").value;
+  if (!id) {
+    mostrarMensaje("Seleccioná un producto para eliminar.", "error");
+    return;
+  }
 
-    const confirmDelete = confirm("¿Estás seguro de eliminar este producto?");
-    if (!confirmDelete) return;
+  // Confirmación simple (podés usar confirm() tradicional o tu propia ventana modal)
+  const confirmDelete = confirm("¿Estás seguro de eliminar este producto?");
+  if (!confirmDelete) return;
 
-    try {
-      const res = await fetch(`${API_URL}/${id}`, {
-        method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${API_KEY}`
-        }
-      });
-
-      if (res.ok) {
-        alert("Producto eliminado correctamente");
-        llenarSelectDesdeAirtable();
-        limpiarFormulario();
-        form.style.display = "none";
-        select.value = ""; // resetear select
-      } else {
-        alert("Error al eliminar el producto");
+  try {
+    const res = await fetch(`${API_URL}/${id}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${API_KEY}`
       }
-    } catch (error) {
-      console.error("Error al eliminar producto:", error);
-    }
+    });
+
+    if (res.ok) {
+      mostrarMensaje("Producto eliminado correctamente", "exito");
       llenarSelectDesdeAirtable();
-  });
+      limpiarFormulario();
+      form.style.display = "none";
+      select.value = ""; // resetear select
+    } else {
+      mostrarMensaje("Error al eliminar el producto", "error");
+    }
+  } catch (error) {
+    console.error("Error al eliminar producto:", error);
+    mostrarMensaje("Error inesperado al eliminar producto", "error");
+  }
 
+  llenarSelectDesdeAirtable();
+  limpiarFormulario();
+});
 
+// Cargar productos al iniciar
+llenarSelectDesdeAirtable();
+limpiarFormulario(); // Limpiar al cargar la página
+});

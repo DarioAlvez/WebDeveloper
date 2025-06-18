@@ -358,7 +358,7 @@ footer a {
 
 /* Estado clicked: botón resaltado con sombra y aumento */
 .btn-agregar-carrito.clicked {
-  background-color: #28a745 !important;  /* verde */
+  background-color: #28a745 !important;  /* en verde asi resalta */
   color: white !important;
   box-shadow: 0 0 15px 4px rgba(40, 167, 69, 0.9);
   transform: scale(1.1);

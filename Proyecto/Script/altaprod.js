@@ -17,6 +17,28 @@ const BASE_ID = "appGL2RO8ExE8iOIz";
 const TABLE_NAME = "productos";
 const API_URL = `https://api.airtable.com/v0/appGL2RO8ExE8iOIz/productos`;
 
+//mensaje de error para reemplazar los alertas 
+
+function mostrarMensaje(texto, tipo = "exito") {
+  const mensaje = document.getElementById("mensaje-sistema");
+  mensaje.textContent = texto;
+  mensaje.style.display = "block";
+
+  if (tipo === "ok") {
+    mensaje.style.backgroundColor = "#d4edda";
+    mensaje.style.color = "#155724";
+    mensaje.style.border = "1px solid #c3e6cb";
+  } else if (tipo === "error") {
+    mensaje.style.backgroundColor = "#f8d7da";
+    mensaje.style.color = "#721c24";
+    mensaje.style.border = "1px solid #f5c6cb";
+  }
+
+  setTimeout(() => {
+    mensaje.style.display = "none";
+  }, 3000);
+}
+
 // cargar prod desde formulario altaproducto 
 document.getElementById("add-product-form").addEventListener("submit", async function (e) {
 e.preventDefault();
@@ -26,31 +48,37 @@ const image = document.getElementById("product-image").value;
 const price = parseFloat(document.getElementById("product-price").value);
 const category = document.getElementById("product-category").value;
 const data = {
-records: [{
-fields: {
-Name: name,
-description: description,
-image: image,
-price: parseFloat(price),
-category: category
-}
-}]
+  records: [{
+    fields: {
+      Name: name,
+      description: description,
+      image: image,
+      price: parseFloat(price),
+      category: category
+    }
+  }]
 };
-const response = await fetch(API_URL, {
-method: "POST",
-headers: {
-"Authorization": `Bearer ${API_KEY}`,
-"Content-Type": "application/json"
-},
-body: JSON.stringify(data)
-});
-if (response.ok) {
-alert("Producto agregado correctamente.");
-e.target.reset();
-formulario.reset();
-} else {
-const error = await response.json();
-alert("Error al agregar producto: " + JSON.stringify(error));
+
+try {
+  const response = await fetch(API_URL, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${API_KEY}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  });
+
+  if (response.ok) {
+    mostrarMensaje("Producto agregado correctamente.", "ok");
+    e.target.reset();
+    // formulario.reset(); // 'formulario' is not defined in this scope, so this line can be removed if unnecessary
+  } else {
+    const error = await response.json();
+    mostrarMensaje("Error al agregar producto: " + JSON.stringify(error), "error");
+  }
+} catch (error) {
+  console.error("Error al agregar producto:", error);
+  mostrarMensaje("Error inesperado al agregar producto.", "error");
 }
 });
-
