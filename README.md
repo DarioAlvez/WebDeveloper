@@ -1,0 +1,16 @@
+Segunda entrega de Poryecto de TP para Aplicaciones Web, "Catalogo"
+
+Dejo algunas aclaraciones para su mejor interpretacion ( reemplaza a !LEER.txt dentro del proyecto)
+
+* Se modifico el proyecto incial con los cambios solicitados.
+
+* Para acceder a la  parte de AdminProd.html se genero un Login contra una tabla de AirTable.
+ El user para poder ingresar el user es: docenteIstea y pass: 123456
+
+*Se agrego una tabla en Airtable de Contacto, donde queda registrado el Formularion de contacto luego de enviarlo.
+
+*Se genero una tabla de productos que se utiliza para llenar  el catalogo del index y que a su vez arrastra a la pagina de detalle de cada producto
+
+*El workflow correcto para verificar la edicion-eliminacion o generacion de un nuevo producto seria: 
+    " ADMINISTRACION DE PRODUCTO - LOGIN y seleccionar Edicion/Eliminar producto o  bien ALTA DE PRODUCTO 
+    el cual escribe sobre la tabla Productos de Airtable. "
