@@ -14,3 +14,7 @@ Dejo algunas aclaraciones para su mejor interpretacion ( reemplaza a !LEER.txt d
 *El workflow correcto para verificar la edicion-eliminacion o generacion de un nuevo producto seria: 
     " ADMINISTRACION DE PRODUCTO - LOGIN y seleccionar Edicion/Eliminar producto o  bien ALTA DE PRODUCTO 
     el cual escribe sobre la tabla Productos de Airtable. "
+
+
+** 24/06/2025 se logro subir el proyecto manteniendo los commits a GitHub Pages:  https://darioalvez.github.io/WebDeveloper/    
+
