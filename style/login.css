@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding-top: 120px; /* ubicacion header */
+}
+
+
+.top-intro {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #002147, #dcdcdc);
+  color: white;
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+}
+
+.top-intro h1 {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.imagenes-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-psag {
+  height: 50px;
+}
+
+.textos-header {
+  flex: 1;
+  text-align: center;
+}
+
+
+
+.menu-foot ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.menu-foot li {
+  background-color: #002147;
+  border-radius: 5px;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.menu-foot a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.menu-foot li:hover {
+  background-color: #dcdcdc;
+}
+
+.menu-foot li:hover a {
+  color: #002147;
+}
+
+main {
+  display: grid;
+  grid-row: auto;
+  gap: 20px;
+  padding: 20px;
+  margin-left: 220px; /*menu lateral*/
+  
+}
+
+#login-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin-top: 50px;
+}
+
+#inputs-login {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#inputs-login label {
+  color: #002147;
+  font-weight: bold;
+}
+
+#inputs-login input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #3871c5;
+  font-size: 1rem;
+  width: 100%;
+}
+
+#inputs-login button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3871c5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#inputs-login button:hover {
+  background-color: #265a9c;
+}
+
+footer {
+    position: fixed;
+    z-index: 1; 
+    bottom: 0;
+    padding: 15px 25px;
+    text-align: center;
+    background: linear-gradient(to right, #002147, #dcdcdc);
+    width: 100%;
+    
+}
+
+footer a {
+  text-decoration: none;
+  color: #f0c040;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .imagenes-logo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-psag {
+    max-width: 60%;
+    height: auto;
+  }
+
+  #inputs-login {
+    padding: 30px 20px;
+  }
+}

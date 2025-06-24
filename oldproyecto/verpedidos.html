@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<HTML lang="es"> <!-- Al setearlo el navegador me sugiere traduccion al español, como el S.O nativo-->
+    <head>      
+    <link rel="stylesheet" href="./style/verpedidos.css">    
+  </head>
+  <body>
+    <main>
+      <div class="top-intro">
+        <div class="imagenes-logo">
+          <img class="logo-psag" src="./img/logo_2017.png" alt="Imagen no disponible">
+          <div class="textos-header">
+            <h1 class="txt-head">Consulta Pedidos Realizados</h1>
+          </div>
+          <img class="logo-psag" src="./img/logo_felpita.png" alt="Imagen no disponible">
+        </div>
+          <nav class="menu-foot">
+            <ul>
+              <li class="li-menu">
+                <a  href="index.html">Catalogo</a>
+              </li>
+              <li class="li-menu">
+                <a  href="nostros.html">Nosotros</a>
+              </li>
+              <li class="li-menu">
+                <a href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+      </div>
+      <div class="separador-header"></div>
+      <div class="consulta-pedidos-top">      
+        <h3 style="font-size: xx-large; padding-bottom: 40px;">Busqueda de Pedido cargado</h3>
+        <div id="flex-busqueda-pedido">
+          <label>Ingrese el número de pedido:</label>
+          <input id="busqueda-pedido" type="text">
+          <label>Ingrese el número de cliente:</label>
+          <input id="busqueda-cliente" type="text">
+          <label>Ingrese Fecha de carga de pedido:</label>
+          <input id="busqueda-fecha" type="date">
+          <button id="btn-buscar-pedido" class="boton-carga" type="submit">Buscar</button>
+        </div> 
+      </div>      
+        <div class="consulta-pedidos-bottom">
+        <div id="flex-resultados-pedido">
+          <h2 style="text-align: center;">Resultado</h4>
+          <table id="tabla-resultado">            
+            <thead>
+              <tr>
+                <th>Pedido</th>
+                <th>Cliente</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>12345</td>
+                <td>Juan Perez</td>
+                <td>9/04/2025</td>
+                <td>En Proceso</td>
+              </tr>
+              <tr>
+                <td>67890</td>
+                <td>Carlos Alvarez</td>
+                <td>12/03/2025</td>
+                <td>Completado</td>                
+              </tr>
+              <tr>
+                <td>54321</td>
+                <td>Maria Lopez</td>
+                <td>15/02/2025</td>
+                <td>En Proceso</td>
+              </tr>
+              <tr>
+                <td>98765</td>
+                <td>Pedro Gonzalez</td>
+                <td>20/01/2025</td>
+                <td>Completado</td>
+              </tr>
+              <tr>
+                <td>13579</td>
+                <td>Ana Torres</td>
+                <td>25/12/2024</td>
+                <td>En Proceso</td>
+              </tr>              
+            </tbody>
+          </table>
+        </div>
+    </main>
+    <footer>
+     <p class="derechosreservados" style="text-align: center;">Todos los derechos reservados por 
+     <a href="https://www.psag.com.ar">Papelera San Andrés de Giles</a> ©.</p>
+    </footer>
+  </body>
+</HTML>
