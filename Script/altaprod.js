@@ -24,7 +24,7 @@ function mostrarMensaje(texto, tipo = "exito") {
   mensaje.textContent = texto;
   mensaje.style.display = "block";
 
-  if (tipo === "ok") {
+  if (tipo === "exito") {
     mensaje.style.backgroundColor = "#d4edda";
     mensaje.style.color = "#155724";
     mensaje.style.border = "1px solid #c3e6cb";
@@ -70,7 +70,7 @@ try {
   });
 
   if (response.ok) {
-    mostrarMensaje("Producto agregado correctamente.", "ok");
+    mostrarMensaje("Producto agregado correctamente.", "exito");
     e.target.reset();
     // formulario.reset(); // 'formulario' is not defined in this scope, so this line can be removed if unnecessary
   } else {

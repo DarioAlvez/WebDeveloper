@@ -35,12 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("select-productos");
   const form = document.getElementById("form-editar-producto");
 
-    //Limpiar formulario y resetearlo post operaciones
-    function limpiarFormulario() {
-    form.reset(); 
-    form.style.display = "none"; 
-    select.value = ""; 
-    }
+  //Limpiar formulario y resetearlo post operaciones
+  function limpiarFormulario() {
+  form.reset(); 
+  form.style.display = "none"; 
+  select.value = ""; 
+  }
 
   async function llenarSelectDesdeAirtable() {
     try {
@@ -138,7 +138,7 @@ btnEliminar.addEventListener("click", async () => {
     return;
   }
 
-  // Confirmación simple (podés usar confirm() tradicional o tu propia ventana modal)
+  // Confirmación antes de eliminar
   const confirmDelete = confirm("¿Estás seguro de eliminar este producto?");
   if (!confirmDelete) return;
 
